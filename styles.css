@@ -1052,3 +1052,93 @@ details.faq-item p { margin-top: 15px; color: var(--color-text-light); }
 .btn-white { background-color: var(--color-white); color: var(--color-primary); }
 .btn-white:hover { background-color: var(--color-accent); color: var(--color-white); }
 
+
+/* ==========================================================================
+   Sidebar Enhancements
+   ========================================================================== */
+.sidebar-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.sidebar-profile img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255,255,255,0.2);
+}
+.sidebar-profile-info h4 {
+    color: var(--color-white);
+    margin: 0;
+    font-size: 1rem;
+}
+.sidebar-profile-info span {
+    color: var(--color-accent);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.menu-label {
+    color: rgba(255,255,255,0.4);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 20px 20px 10px 20px;
+    display: block;
+}
+
+.sidebar-promo {
+    margin: 20px;
+    padding: 20px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    border-radius: var(--radius-md);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+}
+.sidebar-promo::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 80px;
+    height: 80px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+}
+.sidebar-promo h4 {
+    color: var(--color-white);
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+.sidebar-promo p {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+}
+.sidebar-promo .btn {
+    padding: 8px 15px;
+    font-size: 0.8rem;
+    width: 100%;
+}
+
+
+@media (max-width: 1024px) {
+    .sidebar-profile { display: none; }
+    .menu-label { display: none; }
+    .sidebar-promo { display: none; }
+}
+
+@media (max-width: 768px) {
+    .sidebar-profile { display: flex; }
+    .menu-label { display: block; }
+    .sidebar-promo { display: block; }
+}
+

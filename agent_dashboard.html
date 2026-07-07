@@ -4,518 +4,550 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aura Travel | Agent Dashboard</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard_v5.css">
 </head>
 <body>
-    <!-- Page Loader -->
-    <div id="page-loader">
-        <img src="assets/logo.webp" alt="Loading...">
-    </div>
+<div class="main-wrapper">
 
-    <div class="dashboard-layout">
-        
-        <!-- Sidebar for Agent -->
-        <div class="sidebar-overlay" id="sidebarOverlay"></div>
-        <aside class="sidebar" id="sidebar">
-            <div class="sidebar-header" style="display: flex; justify-content: space-between; align-items: center;">
-                <a href="index.html" class="logo"><img src="assets/logo.webp" alt="Aura Travel" style="height: 40px; width: auto;"></a>
-                <i class='bx bx-x d-lg-none' id="closeSidebar" style="font-size: 2rem; color: white; cursor: pointer; display: none;"></i>
-            </div>
-            
-            <ul class="sidebar-menu">
-                <li><a href="#" class="nav-tab active" data-target="tab-overview"><i class='bx bx-grid-alt'></i> <span>Dashboard Overview</span></a></li>
-                <li><a href="#" class="nav-tab" data-target="tab-manage-bookings"><i class='bx bx-calendar-check'></i> <span>Manage Bookings</span></a></li>
-                <li><a href="#" class="nav-tab" data-target="tab-clients"><i class='bx bx-user-circle'></i> <span>Client Directory</span></a></li>
-                <li><a href="#" class="nav-tab" data-target="tab-earnings"><i class='bx bx-line-chart'></i> <span>Earnings Report</span></a></li>
-                <li><a href="#" class="nav-tab" data-target="tab-settings"><i class='bx bx-cog'></i> <span>Agency Settings</span></a></li>
-            </ul>
-            
-            <div class="sidebar-footer">
-                <a href="index.html" style="color: #A0B2BA; display: flex; align-items: center; gap: 10px; text-decoration: none;">
-                    <i class='bx bx-log-out'></i> <span>Log Out</span>
-                </a>
-            </div>
-        </aside>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-        <!-- Main Content -->
-        <main class="main-content">
-
-            <!-- Mobile Header -->
-            <div class="mobile-dash-header d-lg-none" id="mobileHeader">
-                <a href="index.html"><img src="assets/logo.webp" alt="Aura Travel" class="mobile-dash-logo"></a>
-                <i class='bx bx-menu mobile-dash-toggle' id="mobileMenuBtn"></i>
-            </div>
-    
+    <!-- Sidebar -->
+    <aside class="dash-sidebar" id="sidebar">
+        <div class="dash-logo">
+            <a href="index.html"><img src="assets/logo.webp" alt="Aura Travel" style="height: 35px; width: auto;"></a>
+        </div>
+        <div class="dash-nav">
+            <div class="dash-nav-label">Main Menu</div>
+            <a class="dash-nav-item active" data-target="tab-overview"><i class='bx bx-home-alt'></i> Dashboard</a>
+            <a class="dash-nav-item" data-target="tab-manage-bookings"><i class='bx bx-check-shield'></i> Approvals</a>
+            <a class="dash-nav-item" data-target="tab-active-tours"><i class='bx bx-map-alt'></i> Active Tours</a>
             
-            <!-- Dashboard Header -->
-            <div class="dash-header">
+            <div class="dash-nav-label">Account</div>
+            <a class="dash-nav-item" data-target="tab-payouts"><i class='bx bx-wallet'></i> Payouts</a>
+            <a class="dash-nav-item" data-target="tab-settings"><i class='bx bx-cog'></i> Settings</a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dash-main">
+        <!-- Topbar -->
+        <header class="dash-topbar">
+            <div class="dash-topbar-left">
+                <i class='bx bx-menu mobile-toggle' id="mobileMenuBtn"></i>
+                <div class="mobile-logo">
+                    <img src="assets/logo.webp" alt="Aura Travel" style="height: 30px; width: auto;">
+                </div>
                 <div>
-                    <h2 style="font-size: 2rem; color: #333;" id="dashTitle">Agent Dashboard</h2>
-                    <p style="color: #666;" id="dashSubtitle">Here's an overview of your agency's performance today.</p>
-                    <p style="color: var(--color-primary); font-size: 0.85rem; font-weight: 600; margin-top: 5px;" id="topLeftEmail"></p>
-                </div>
-                <div class="user-profile-sm">
-                    <img id="topRightAvatar" src="https://ui-avatars.com/api/?name=User&background=088395&color=fff" alt="User">
-                    <div style="text-align: right;">
-                        <div id="topRightName" style="font-weight: 600; color: #333; line-height: 1.2;">Agent Smith</div>
-                        <div style="font-size: 0.8rem; color: #666;">Senior Travel Consultant</div>
-                    </div>
+                    <h2>Overview</h2>
+                    <p>Agent Dashboard</p>
                 </div>
             </div>
+            <div class="dash-topbar-right">
+                <div class="dash-topbar-user">
+                    <h4 id="topRightName">Agent</h4>
+                    <p id="topLeftEmail">agent@example.com</p>
+                </div>
+                <img id="topRightAvatar" src="https://ui-avatars.com/api/?name=Agent&background=05cd99&color=fff" alt="User">
+            </div>
+        </header>
+
+        <!-- Content Area -->
+        <div class="dash-content">
 
             <!-- TAB 1: OVERVIEW -->
-            <div id="tab-overview" class="tab-content active">
-                <div class="dash-stats">
-                    <div class="dash-stat-card">
-                        <div class="dash-stat-icon" style="background: rgba(46, 138, 87, 0.1); color: var(--color-emerald);"><i class='bx bx-dollar-circle'></i></div>
-                        <div class="dash-stat-info">
+            <div id="tab-overview" class="tab-pane active">
+                
+                <!-- Stat Cards -->
+                <div class="dash-grid-4">
+                    <div class="dash-card stat-widget">
+                        <div class="stat-icon blue"><i class='bx bx-dollar-circle'></i></div>
+                        <div class="stat-info">
                             <h4>Monthly Revenue</h4>
                             <h2>$84,500</h2>
                         </div>
                     </div>
-                    <div class="dash-stat-card">
-                        <div class="dash-stat-icon" style="background: rgba(229, 124, 35, 0.1); color: var(--color-accent);"><i class='bx bx-time-five'></i></div>
-                        <div class="dash-stat-info">
+                    <div class="dash-card stat-widget">
+                        <div class="stat-icon orange"><i class='bx bx-time-five'></i></div>
+                        <div class="stat-info">
                             <h4>Pending Approvals</h4>
                             <h2>5</h2>
                         </div>
                     </div>
-                    <div class="dash-stat-card">
-                        <div class="dash-stat-icon" style="background: rgba(8, 131, 149, 0.1); color: var(--color-primary);"><i class='bx bx-group'></i></div>
-                        <div class="dash-stat-info">
+                    <div class="dash-card stat-widget">
+                        <div class="stat-icon green"><i class='bx bx-group'></i></div>
+                        <div class="stat-info">
                             <h4>Active Clients</h4>
-                            <h2>124</h2>
+                            <h2 style="color: var(--accent-green);">124</h2>
+                        </div>
+                    </div>
+                    <div class="dash-card stat-widget">
+                        <div class="stat-icon red"><i class='bx bx-line-chart'></i></div>
+                        <div class="stat-info">
+                            <h4>Conversion Rate</h4>
+                            <h2>18%</h2>
                         </div>
                     </div>
                 </div>
 
-                <div class="dash-section">
-                    <div class="dash-section-header">
-                        <h3 style="color: #333; font-size: 1.3rem;">Recent Booking Requests</h3>
-                        <a href="#" class="nav-trigger" data-target="tab-manage-bookings" style="color: var(--color-secondary); font-size: 0.9rem; font-weight: 600;">View All Requests</a>
+                <!-- Charts Row 1 -->
+                <div class="dash-grid-2">
+                    <div class="dash-card">
+                        <div class="dash-card-header">
+                            <h3>Revenue Overview</h3>
+                            <span style="font-size: 0.8rem; color: var(--text-secondary);"><span style="color: var(--accent-blue);">●</span> This Month &nbsp; <span style="color: #e2e8f0;">●</span> Last Month</span>
+                        </div>
+                        <div class="chart-box">
+                            <i class='bx bx-bar-chart-square'></i>
+                        </div>
+                    </div>
+
+                    <div class="dash-card">
+                        <div class="dash-card-header">
+                            <h3>Client Demographics</h3>
+                        </div>
+                        <div class="circle-progress-wrapper">
+                            <div class="circle-progress-item">
+                                <div class="circle-progress circle-blue" style="--p: 60%;"><span>60%</span></div>
+                                <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 10px;">Couples</p>
+                            </div>
+                            <div class="circle-progress-item">
+                                <div class="circle-progress circle-green" style="--p: 30%;"><span>30%</span></div>
+                                <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 10px;">Families</p>
+                            </div>
+                            <div class="circle-progress-item">
+                                <div class="circle-progress circle-orange" style="--p: 10%;"><span>10%</span></div>
+                                <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 10px;">Solo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- TAB 2: APPROVALS -->
+            <div id="tab-manage-bookings" class="tab-pane">
+                
+                <!-- Section 1: Quick Stats -->
+                <div class="dash-grid-2">
+                    <div class="dash-card stat-widget" style="background: rgba(255,181,71,0.1); border: 1px solid var(--accent-orange);">
+                        <div class="stat-icon orange" style="background: white;"><i class='bx bx-time-five'></i></div>
+                        <div class="stat-info">
+                            <h4>Pending Action</h4>
+                            <h2 style="color: var(--accent-orange);">5 Requests</h2>
+                        </div>
+                    </div>
+                    <div class="dash-card stat-widget" style="background: rgba(5,205,153,0.1); border: 1px solid var(--accent-green);">
+                        <div class="stat-icon green" style="background: white;"><i class='bx bx-check-double'></i></div>
+                        <div class="stat-info">
+                            <h4>Approved Today</h4>
+                            <h2 style="color: var(--accent-green);">12 Requests</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2: Priority Queue -->
+                <div class="dash-card" style="margin-bottom: 20px;">
+                    <div class="dash-card-header">
+                        <h3>Priority Queue</h3>
+                        <span class="badge badge-warning">High Priority</span>
+                    </div>
+                    <div class="flex-between" style="border: 1px solid #e2e8f0; border-left: 4px solid var(--accent-red); padding: 15px; border-radius: var(--radius-md);">
+                        <div>
+                            <h4 style="margin: 0 0 5px 0;">Large Group Booking (15 Pax)</h4>
+                            <p style="margin: 0; font-size: 0.8rem; color: var(--text-secondary);">Departs in 48 hours - Kyoto Temples</p>
+                        </div>
+                        <button class="dash-btn dash-btn-primary" style="padding: 5px 15px; font-size: 0.8rem;" onclick="window.location.href='404.html'">Review Now</button>
+                    </div>
+                </div>
+
+                <!-- Section 3: Approvals Table -->
+                <div class="dash-card" style="margin-bottom: 20px;">
+                    <div class="dash-card-header">
+                        <h3>Pending Approvals</h3>
+                    </div>
+                    <div class="table-responsive">
+                    <table class="dash-table">
+                        <thead>
+                            <tr>
+                                <th>Booking ID</th>
+                                <th>Client Name</th>
+                                <th>Tour Package</th>
+                                <th>Dates</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#A-9082</td>
+                                <td>Sarah Jenkins</td>
+                                <td>Kyoto Temples</td>
+                                <td>Apr 12 - Apr 20, 2026</td>
+                                <td>
+                                    <div style="display:flex; gap:10px;">
+                                        <button class="dash-btn dash-btn-primary" style="padding: 5px 15px; font-size: 0.8rem;" onclick="window.location.href='404.html'">Approve</button>
+                                        <button class="dash-btn dash-btn-outline" style="padding: 5px 15px; font-size: 0.8rem; border-color: var(--accent-red); color: var(--accent-red);" onclick="window.location.href='404.html'">Decline</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+
+                <!-- Section 4: Recent Activity Log -->
+                <div class="dash-card">
+                    <div class="dash-card-header">
+                        <h3>Recent Activity Log</h3>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 15px;">
+                        <div style="display: flex; gap: 15px; align-items: flex-start;">
+                            <div style="width: 10px; height: 10px; border-radius: 50%; background: var(--accent-green); margin-top: 5px;"></div>
+                            <div>
+                                <h4 style="margin: 0 0 5px 0; font-size: 0.9rem;">Approved Booking #A-9081</h4>
+                                <span style="font-size: 0.75rem; color: var(--text-secondary);">2 hours ago by Agent Smith</span>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 15px; align-items: flex-start;">
+                            <div style="width: 10px; height: 10px; border-radius: 50%; background: var(--accent-red); margin-top: 5px;"></div>
+                            <div>
+                                <h4 style="margin: 0 0 5px 0; font-size: 0.9rem;">Declined Booking #A-9080</h4>
+                                <span style="font-size: 0.75rem; color: var(--text-secondary);">5 hours ago by Agent Smith</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- TAB 3: ACTIVE TOURS -->
+            <div id="tab-active-tours" class="tab-pane">
+                
+                <!-- Section 1: Capacity Overview -->
+                <div class="dash-grid-4">
+                    <div class="dash-card" style="text-align: center; padding: 15px;">
+                        <h4 style="margin: 0 0 10px 0; color: var(--text-secondary); font-size: 0.8rem;">Total Listings</h4>
+                        <h2 style="margin: 0; color: var(--accent-blue);">24</h2>
+                    </div>
+                    <div class="dash-card" style="text-align: center; padding: 15px;">
+                        <h4 style="margin: 0 0 10px 0; color: var(--text-secondary); font-size: 0.8rem;">Fully Booked</h4>
+                        <h2 style="margin: 0; color: var(--accent-green);">8</h2>
+                    </div>
+                    <div class="dash-card" style="text-align: center; padding: 15px;">
+                        <h4 style="margin: 0 0 10px 0; color: var(--text-secondary); font-size: 0.8rem;">Low Capacity</h4>
+                        <h2 style="margin: 0; color: var(--accent-orange);">3</h2>
+                    </div>
+                    <div class="dash-card" style="text-align: center; padding: 15px;">
+                        <h4 style="margin: 0 0 10px 0; color: var(--text-secondary); font-size: 0.8rem;">Inactive</h4>
+                        <h2 style="margin: 0; color: var(--text-primary);">2</h2>
+                    </div>
+                </div>
+
+                <!-- Section 2: Top Performing Tour -->
+                <div class="dash-card" style="margin-bottom: 20px;">
+                    <div class="dash-card-header">
+                        <h3>Top Performing Tour</h3>
+                        <span class="badge badge-success">#1 Bestseller</span>
+                    </div>
+                    <div class="flex-between flex-wrap gap-15">
+                        <div style="display:flex; gap: 20px; align-items:center; flex:1;">
+                            <img src="assets/dest_swiss.webp" style="width: 150px; height: 100px; border-radius: var(--radius-md); object-fit: cover;">
+                            <div>
+                                <h3 style="margin: 0 0 10px 0;">Swiss Alps Expedition</h3>
+                                <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);"><i class='bx bx-group'></i> 1,240 Bookings this year</p>
+                            </div>
+                        </div>
+                        <button class="dash-btn dash-btn-outline" onclick="window.location.href='404.html'">Promote</button>
+                    </div>
+                </div>
+
+                <!-- Section 3: Active Tours Table -->
+                <div class="dash-card" style="margin-bottom: 20px;">
+                    <div class="dash-card-header">
+                        <h3>All Active Tours</h3>
+                        <button class="dash-btn dash-btn-primary" onclick="window.location.href='404.html'">Create New Tour</button>
+                    </div>
+                    <div class="table-responsive">
+                    <table class="dash-table">
+                        <thead>
+                            <tr>
+                                <th>Tour Name</th>
+                                <th>Capacity</th>
+                                <th>Status</th>
+                                <th>Manage</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Magical Venice & Rome</td>
+                                <td>18 / 20</td>
+                                <td><span class="badge badge-success">Active</span></td>
+                                <td><button class="dash-btn dash-btn-outline" style="padding: 5px 15px; font-size: 0.8rem;" onclick="window.location.href='404.html'">Edit</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+
+                <!-- Section 4: Client Feedback -->
+                <div class="dash-card">
+                    <div class="dash-card-header">
+                        <h3>Recent Client Feedback</h3>
+                    </div>
+                    <div style="background: var(--bg-color); padding: 15px; border-radius: var(--radius-md);">
+                        <div class="flex-between" style="margin-bottom: 5px;">
+                            <h4 style="margin:0; font-size: 0.9rem;">Mark D. (Venice Tour)</h4>
+                            <span style="color: #ffb547;"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+                        </div>
+                        <p style="margin:0; font-size: 0.85rem; color: var(--text-secondary);">"Incredible experience, the guides were perfectly organized. Highly recommend this agency!"</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- TAB 4: PAYOUTS -->
+            <div id="tab-payouts" class="tab-pane">
+                
+                <!-- Section 1: Wallet Balance -->
+                <div class="dash-grid-2">
+                    <div class="dash-card" style="background: var(--accent-green); color: white;">
+                        <h4 style="margin: 0 0 10px 0; color: rgba(255,255,255,0.8);">Available for Payout</h4>
+                        <h1 style="margin: 0 0 20px 0; font-size: 2.5rem;">$24,500.00</h1>
+                        <button class="dash-btn" style="background: white; color: var(--accent-green);" onclick="window.location.href='404.html'">Withdraw Funds</button>
                     </div>
                     
-                    <div class="data-table-wrapper">
-                        <table class="data-table">
-                            <thead>
-                                <tr>
-                                    <th>Client Name</th>
-                                    <th>Destination</th>
-                                    <th>Dates</th>
-                                    <th>Amount</th>
-                                    <th>Status</th>
-                                    <th>Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>John Doe</strong><br><span style="font-size:0.8rem; color:#666;">john.doe@example.com</span></td>
-                                    <td>Swiss Alps Cabin</td>
-                                    <td>Dec 10 - Dec 17, 2026</td>
-                                    <td>$4,200</td>
-                                    <td><span class="badge badge-warning">Awaiting Approval</span></td>
-                                    <td>
-                                        <div style="display:flex; gap:10px;">
-                                            <button class="action-btn btn-approve" onclick="alert('Booking Approved!')">Approve</button>
-                                            <button class="action-btn btn-decline" onclick="alert('Booking Declined.')">Decline</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-
-            
-                <div class="grid-2" style="margin-top: 30px;">
-                    <div class="dash-section">
-                        <div class="dash-section-header">
-                            <h3 style="color: #333; font-size: 1.3rem;">Recent Client Inquiries</h3>
-                            <a href="#" style="color: var(--color-secondary); font-size: 0.9rem; font-weight: 600;">View All</a>
+                    <!-- Section 2: Payout Methods -->
+                    <div class="dash-card">
+                        <div class="dash-card-header">
+                            <h3>Payout Accounts</h3>
+                            <button class="dash-btn dash-btn-outline" style="padding: 5px 10px; font-size: 0.75rem;" onclick="window.location.href='404.html'">+ Add Bank</button>
                         </div>
-                        <div class="booking-list">
-                            <div class="booking-item" style="align-items: flex-start;">
-                                <img src="https://ui-avatars.com/api/?name=Sarah+J&background=random" style="border-radius: 50%;">
-                                <div class="booking-info">
-                                    <h4>Sarah Jenkins</h4>
-                                    <p style="margin-bottom: 5px; color: #666; font-style: italic;">"I am looking for a family tour in Japan this December..."</p>
-                                    <span style="font-size: 0.8rem; color: #999;"><i class='bx bx-time'></i> 2 hours ago</span>
+                        <div class="flex-between" style="padding: 10px 0; border-bottom: 1px solid #e2e8f0;">
+                            <div style="display:flex; align-items:center; gap:10px;">
+                                <i class='bx bxs-bank' style="font-size: 2rem; color: var(--text-primary);"></i>
+                                <div>
+                                    <span style="display:block; font-size: 0.9rem;">Chase Business Checking</span>
+                                    <span style="font-size: 0.75rem; color: var(--text-secondary);">**** 5678</span>
                                 </div>
                             </div>
-                            <div class="booking-item" style="align-items: flex-start;">
-                                <img src="https://ui-avatars.com/api/?name=Michael+T&background=random" style="border-radius: 50%;">
-                                <div class="booking-info">
-                                    <h4>Michael Torres</h4>
-                                    <p style="margin-bottom: 5px; color: #666; font-style: italic;">"Can we upgrade our Maldives resort to a water villa?"</p>
-                                    <span style="font-size: 0.8rem; color: #999;"><i class='bx bx-time'></i> 5 hours ago</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dash-section">
-                        <div class="dash-section-header">
-                            <h3 style="color: #333; font-size: 1.3rem;">Top Performing Packages</h3>
-                        </div>
-                        <div class="booking-list">
-                            <div class="booking-item">
-                                <img src="assets/opt_img_12.webp" alt="Santorini">
-                                <div class="booking-info">
-                                    <h4>Santorini Premium Escape</h4>
-                                    <p style="color: #666;">42 Bookings this month</p>
-                                </div>
-                                <div style="color: var(--color-emerald); font-weight: 600; font-size: 1.1rem;"><i class='bx bx-trending-up'></i> 12%</div>
-                            </div>
-                            <div class="booking-item">
-                                <img src="assets/opt_img_13.webp" alt="Venice">
-                                <div class="booking-info">
-                                    <h4>Magical Venice & Rome</h4>
-                                    <p style="color: #666;">28 Bookings this month</p>
-                                </div>
-                                <div style="color: var(--color-emerald); font-weight: 600; font-size: 1.1rem;"><i class='bx bx-trending-up'></i> 5%</div>
-                            </div>
+                            <span class="badge badge-success">Active</span>
                         </div>
                     </div>
                 </div>
 
-
-            
-                <!-- Quick Actions & Upcoming -->
-                <div class="grid-2" style="margin-top: 30px;">
-                    <!-- Quick Actions -->
-                    <div class="dash-section">
-                        <h3 style="color: #333; font-size: 1.3rem; margin-bottom: 20px;">Quick Actions</h3>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                            <button class="btn btn-primary" onclick="window.location.href='404.html'" style="cursor: pointer; padding: 15px; font-size: 0.9rem; border-radius: 8px; display: flex; flex-direction: column; align-items: center; gap: 10px;">
-                                <i class='bx bx-file-blank' style="font-size: 1.8rem;"></i> Create Quote
-                            </button>
-                            <button class="btn btn-secondary" onclick="window.location.href='404.html'" style="cursor: pointer; background: rgba(10,35,46,0.1); color: var(--color-primary); padding: 15px; font-size: 0.9rem; border-radius: 8px; display: flex; flex-direction: column; align-items: center; gap: 10px;">
-                                <i class='bx bx-message-square-dots' style="font-size: 1.8rem;"></i> Message Client
-                            </button>
-                            <button class="btn btn-secondary" onclick="window.location.href='404.html'" style="cursor: pointer; background: rgba(10,35,46,0.1); color: var(--color-primary); padding: 15px; font-size: 0.9rem; border-radius: 8px; display: flex; flex-direction: column; align-items: center; gap: 10px;">
-                                <i class='bx bx-calendar-event' style="font-size: 1.8rem;"></i> Schedule Call
-                            </button>
-                            <button class="btn btn-secondary" onclick="window.location.href='404.html'" style="cursor: pointer; background: rgba(10,35,46,0.1); color: var(--color-primary); padding: 15px; font-size: 0.9rem; border-radius: 8px; display: flex; flex-direction: column; align-items: center; gap: 10px;">
-                                <i class='bx bx-money' style="font-size: 1.8rem;"></i> Send Invoice
-                            </button>
+                <!-- Section 3: Upcoming Payout Alert -->
+                <div class="dash-card" style="margin-bottom: 20px; border-left: 4px solid var(--accent-blue);">
+                    <div class="flex-between">
+                        <div>
+                            <h4 style="margin:0 0 5px 0;">Next Scheduled Auto-Payout</h4>
+                            <span style="font-size:0.8rem; color:var(--text-secondary);">Processing on Nov 01, 2026 for $15,000</span>
                         </div>
-                    </div>
-
-                    <!-- Upcoming Departures -->
-                    <div class="dash-section">
-                        <div class="dash-section-header">
-                            <h3 style="color: #333; font-size: 1.3rem;">Upcoming Departures (Next 7 Days)</h3>
-                        </div>
-                        <div class="booking-list">
-                            <div class="booking-item">
-                                <div style="background: rgba(229, 124, 35, 0.1); color: var(--color-accent); padding: 15px; border-radius: 8px; font-weight: bold; text-align: center; min-width: 60px;">
-                                    <div style="font-size: 1.5rem;">12</div>
-                                    <div style="font-size: 0.7rem; text-transform: uppercase;">Aug</div>
-                                </div>
-                                <div class="booking-info">
-                                    <h4>The Henderson Family (4)</h4>
-                                    <p>Flight AF120 • Paris CDG</p>
-                                </div>
-                                <div class="booking-status status-upcoming">Tomorrow</div>
-                            </div>
-                            <div class="booking-item">
-                                <div style="background: rgba(10, 35, 46, 0.1); color: var(--color-primary); padding: 15px; border-radius: 8px; font-weight: bold; text-align: center; min-width: 60px;">
-                                    <div style="font-size: 1.5rem;">15</div>
-                                    <div style="font-size: 0.7rem; text-transform: uppercase;">Aug</div>
-                                </div>
-                                <div class="booking-info">
-                                    <h4>David Smith</h4>
-                                    <p>Flight EK30 • Dubai DXB</p>
-                                </div>
-                                <div class="booking-status status-completed">In 4 Days</div>
-                            </div>
-                        </div>
+                        <button class="dash-btn dash-btn-outline" style="padding: 5px 15px; font-size: 0.8rem;" onclick="window.location.href='404.html'">Manage Schedule</button>
                     </div>
                 </div>
-    
 
-            <!-- TAB 2: MANAGE BOOKINGS -->
-            <div id="tab-manage-bookings" class="tab-content">
-                <div class="dash-section">
-                    <h3 style="color: #333; font-size: 1.3rem; margin-bottom: 20px;">All Client Bookings</h3>
-                    <div class="data-table-wrapper">
-                        <table class="data-table">
-                            <thead>
-                                <tr>
-                                    <th>Booking ID</th>
-                                    <th>Client Name</th>
-                                    <th>Destination</th>
-                                    <th>Dates</th>
-                                    <th>Amount</th>
-                                    <th>Status</th>
-                                    <th>Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>#B-1099</td>
-                                    <td><strong>John Doe</strong></td>
-                                    <td>Swiss Alps Cabin</td>
-                                    <td>Dec 10 - Dec 17, 2026</td>
-                                    <td>$4,200</td>
-                                    <td><span class="badge badge-warning">Awaiting</span></td>
-                                    <td><button class="action-btn btn-approve" onclick="alert('Approved!')">Approve</button></td>
-                                </tr>
-                                <tr>
-                                    <td>#B-1098</td>
-                                    <td><strong>Sarah Lee</strong></td>
-                                    <td>Bali Bliss Retreat</td>
-                                    <td>Mar 05 - Mar 15, 2026</td>
-                                    <td>$3,800</td>
-                                    <td><span class="badge badge-success">Confirmed</span></td>
-                                    <td><button class="action-btn btn-decline" onclick="window.location.href='404.html'">View</button></td>
-                                </tr>
-                                <tr>
-                                    <td>#B-1097</td>
-                                    <td><strong>David Chen</strong></td>
-                                    <td>Magical Venice</td>
-                                    <td>Nov 10 - Nov 17, 2026</td>
-                                    <td>$5,100</td>
-                                    <td><span class="badge badge-success">Confirmed</span></td>
-                                    <td><button class="action-btn btn-decline" onclick="window.location.href='404.html'">View</button></td>
-                                </tr>
-                                <tr>
-                                    <td>#B-1096</td>
-                                    <td><strong>Emma Stone</strong></td>
-                                    <td>Paris Weekend</td>
-                                    <td>Oct 12 - Oct 15, 2026</td>
-                                    <td>$2,200</td>
-                                    <td><span class="badge badge-warning">Awaiting</span></td>
-                                    <td><button class="action-btn btn-approve" onclick="alert('Approved!')">Approve</button></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                <!-- Section 4: Recent Payouts Table -->
+                <div class="dash-card">
+                    <div class="dash-card-header">
+                        <h3>Recent Payouts</h3>
+                        <button class="dash-btn dash-btn-outline" style="padding: 5px 15px; font-size: 0.8rem;" onclick="window.location.href='404.html'">Export CSV</button>
+                    </div>
+                    <div class="table-responsive">
+                    <table class="dash-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Account</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Oct 01, 2026</td>
+                                <td>$12,400.00</td>
+                                <td>**** **** 5678</td>
+                                <td><span class="badge badge-success">Completed</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
                     </div>
                 </div>
-            </div>
 
-            <!-- TAB 3: CLIENT DIRECTORY -->
-            <div id="tab-clients" class="tab-content">
-                <div class="dash-section">
-                    <h3 style="color: #333; font-size: 1.3rem; margin-bottom: 20px;">Client Directory</h3>
-                    <div class="client-grid">
-                        <div class="client-card">
-                            <img src="https://ui-avatars.com/api/?name=John+Doe&background=random" alt="John">
-                            <h4>John Doe</h4>
-                            <p>john.doe@example.com</p>
-                            <span class="badge badge-success">Gold Member</span>
-                            <p style="margin-top:10px; font-weight:600;">Total Spend: $14,200</p>
-                        </div>
-                        <div class="client-card">
-                            <img src="https://ui-avatars.com/api/?name=Sarah+Lee&background=random" alt="Sarah">
-                            <h4>Sarah Lee</h4>
-                            <p>sarah@example.com</p>
-                            <span class="badge badge-warning">Silver Member</span>
-                            <p style="margin-top:10px; font-weight:600;">Total Spend: $8,500</p>
-                        </div>
-                        <div class="client-card">
-                            <img src="https://ui-avatars.com/api/?name=David+Chen&background=random" alt="David">
-                            <h4>David Chen</h4>
-                            <p>david.c@example.com</p>
-                            <span class="badge badge-success">Platinum Member</span>
-                            <p style="margin-top:10px; font-weight:600;">Total Spend: $35,100</p>
-                        </div>
-                        <div class="client-card">
-                            <img src="https://ui-avatars.com/api/?name=Emma+Stone&background=random" alt="Emma">
-                            <h4>Emma Stone</h4>
-                            <p>emma.s@example.com</p>
-                            <span class="badge badge-warning">Silver Member</span>
-                            <p style="margin-top:10px; font-weight:600;">Total Spend: $6,200</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- TAB 4: EARNINGS REPORT -->
-            <div id="tab-earnings" class="tab-content">
-                <div class="dash-section">
-                    <h3 style="color: #333; font-size: 1.3rem; margin-bottom: 20px;">Earnings Report (2026)</h3>
-                    <div class="data-table-wrapper">
-                        <table class="data-table">
-                            <thead>
-                                <tr>
-                                    <th>Month</th>
-                                    <th>Bookings</th>
-                                    <th>Gross Revenue</th>
-                                    <th>Agency Commission (15%)</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>July</strong></td>
-                                    <td>42</td>
-                                    <td>$84,500</td>
-                                    <td>$12,675</td>
-                                    <td><span class="badge badge-warning">Processing</span></td>
-                                </tr>
-                                <tr>
-                                    <td><strong>June</strong></td>
-                                    <td>38</td>
-                                    <td>$76,200</td>
-                                    <td>$11,430</td>
-                                    <td><span class="badge badge-success">Paid Out</span></td>
-                                </tr>
-                                <tr>
-                                    <td><strong>May</strong></td>
-                                    <td>55</td>
-                                    <td>$110,000</td>
-                                    <td>$16,500</td>
-                                    <td><span class="badge badge-success">Paid Out</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
             </div>
 
             <!-- TAB 5: SETTINGS -->
-            <div id="tab-settings" class="tab-content">
-                <form class="settings-form" action="404.html">
-                    <h3 style="color: #333; font-size: 1.3rem; margin-bottom: 20px;">Agency Settings</h3>
-                    <div class="form-group">
-                        <label>Agent Name</label>
-                        <input type="text" value="Agent Smith">
+            <div id="tab-settings" class="tab-pane">
+                
+                <div class="dash-grid-2">
+                    <!-- Section 1: Profile Form -->
+                    <div class="dash-card">
+                        <div class="dash-card-header">
+                            <h3>Agency Profile Settings</h3>
+                        </div>
+                        <form class="dash-form" id="settingsForm">
+                            <div class="dash-form-group full">
+                                <label>Agency Logo</label>
+                                <div style="display: flex; align-items: center; gap: 15px;">
+                                    <img id="settingsAvatar" src="https://ui-avatars.com/api/?name=Agent&background=05cd99&color=fff" style="width: 80px; height: 80px; border-radius: 50%;">
+                                    <button type="button" class="dash-btn dash-btn-outline" onclick="window.location.href='404.html'">Upload New</button>
+                                </div>
+                            </div>
+                            <div class="dash-form-group">
+                                <label>Agent / Agency Name</label>
+                                <input type="text" id="settingsFirstName" required>
+                            </div>
+                            <div class="dash-form-group">
+                                <label>Business Email</label>
+                                <input type="email" id="settingsEmail" required>
+                            </div>
+                            <div class="dash-form-group full">
+                                <label>Payout Bank Account (IBAN)</label>
+                                <input type="text" value="US12 3456 7890 1234" required>
+                            </div>
+                            <div class="dash-form-group full" style="margin-top: 10px;">
+                                <button class="dash-btn dash-btn-primary" type="submit">Save Changes</button>
+                            </div>
+                        </form>
                     </div>
-                    <div class="form-group">
-                        <label>Business Email</label>
-                        <input type="email" id="settingsEmail" value="smith@auratravel.com">
+
+                    <div style="display:flex; flex-direction: column; gap: 20px;">
+                        <!-- Section 2: Security -->
+                        <div class="dash-card">
+                            <div class="dash-card-header">
+                                <h3>Security</h3>
+                            </div>
+                            <div class="dash-form-group" style="margin-bottom: 10px;">
+                                <label>Current Password</label>
+                                <input type="password" value="********" readonly>
+                            </div>
+                            <button class="dash-btn dash-btn-outline" style="width: 100%;" onclick="window.location.href='404.html'">Update Password</button>
+                        </div>
+
+                        <!-- Section 3: Notification Preferences -->
+                        <div class="dash-card">
+                            <div class="dash-card-header">
+                                <h3>Business Notifications</h3>
+                            </div>
+                            <div class="flex-between" style="margin-bottom:15px;">
+                                <span style="font-size:0.9rem; font-weight:500;">New Booking Alerts (Email)</span>
+                                <input type="checkbox" checked style="width:20px; height:20px; accent-color: var(--accent-blue);">
+                            </div>
+                            <div class="flex-between">
+                                <span style="font-size:0.9rem; font-weight:500;">Payout Confirmations</span>
+                                <input type="checkbox" checked style="width:20px; height:20px; accent-color: var(--accent-blue);">
+                            </div>
+                        </div>
+
+                        <!-- Section 4: Team Members -->
+                        <div class="dash-card">
+                            <div class="dash-card-header">
+                                <h3>Team Members</h3>
+                                <button class="dash-btn dash-btn-outline" style="padding: 5px 10px; font-size: 0.75rem;" onclick="window.location.href='404.html'">+ Add</button>
+                            </div>
+                            <div class="flex-between">
+                                <div style="display:flex; align-items:center; gap:10px;">
+                                    <div style="width:30px; height:30px; border-radius:50%; background:var(--accent-blue); color:white; display:flex; align-items:center; justify-content:center; font-size:0.8rem;">S</div>
+                                    <span style="font-size:0.9rem;">Sarah J. (Admin)</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label>Payout Bank Account (IBAN)</label>
-                        <input type="text" value="US12 3456 7890 1234">
-                    </div>
-                    <div class="form-group" style="display:flex; align-items:center; gap:10px;">
-                        <input type="checkbox" checked style="width:auto;">
-                        <span>Receive new booking alerts via email</span>
-                    </div>
-                    <button class="btn btn-primary" type="submit">Save Changes</button>
-                </form>
+                </div>
+
             </div>
 
-        </main>
-    </div>
+        </div>
+    </main>
 
     <script>
-        // Tab Switching Logic
-        const tabs = document.querySelectorAll('.nav-tab');
-        const contents = document.querySelectorAll('.tab-content');
-        const triggers = document.querySelectorAll('.nav-trigger');
-        const title = document.getElementById('dashTitle');
-        const subtitle = document.getElementById('dashSubtitle');
+        // Tab Navigation
+        const tabs = document.querySelectorAll('.dash-nav-item');
+        const panes = document.querySelectorAll('.tab-pane');
+        const headerTitle = document.querySelector('.dash-topbar-left h2');
+        const headerSubtitle = document.querySelector('.dash-topbar-left p');
 
         const titleMap = {
-            'tab-overview': { t: 'Agent Dashboard', s: 'Here\'s an overview of your agency\'s performance today.' },
-            'tab-manage-bookings': { t: 'Manage Bookings', s: 'Review and approve client itineraries.' },
-            'tab-clients': { t: 'Client Directory', s: 'View your client base and loyalty tiers.' },
-            'tab-earnings': { t: 'Earnings Report', s: 'Financial breakdown and commission tracking.' },
-            'tab-settings': { t: 'Agency Settings', s: 'Manage your agent profile and payouts.' }
+            'tab-overview': { t: 'Overview', s: 'Agent Dashboard' },
+            'tab-manage-bookings': { t: 'Approvals', s: 'Pending client bookings' },
+            'tab-active-tours': { t: 'Active Tours', s: 'Manage your listings' },
+            'tab-payouts': { t: 'Payouts', s: 'Financial overview' },
+            'tab-settings': { t: 'Settings', s: 'Agency preferences' }
         };
 
-        function switchTab(targetId) {
-            // Remove active from all tabs and contents
-            tabs.forEach(t => t.classList.remove('active'));
-            contents.forEach(c => c.classList.remove('active'));
-
-            // Add active to target
-            const activeTab = document.querySelector(`.nav-tab[data-target="${targetId}"]`);
-            if (activeTab) activeTab.classList.add('active');
-            document.getElementById(targetId).classList.add('active');
-
-            // Update Header
-            if (titleMap[targetId]) {
-                title.textContent = titleMap[targetId].t;
-                subtitle.textContent = titleMap[targetId].s;
-            }
-        }
-
         tabs.forEach(tab => {
-            tab.addEventListener('click', (e) => {
-                e.preventDefault();
-                switchTab(tab.getAttribute('data-target'));
-            });
-        });
-
-        // "View All" triggers
-        triggers.forEach(trigger => {
-            trigger.addEventListener('click', (e) => {
-                e.preventDefault();
-                switchTab(trigger.getAttribute('data-target'));
-            });
-        });
-
-        // Load stored email
-        const storedEmail = localStorage.getItem('userEmail');
-        if (storedEmail) {
-            const settingsEmail = document.getElementById('settingsEmail');
-            if (settingsEmail) settingsEmail.value = storedEmail;
-            
-            const topLeftEmail = document.getElementById('topLeftEmail');
-            if (topLeftEmail) topLeftEmail.textContent = 'Logged in as: ' + storedEmail;
-            
-            const topRightName = document.getElementById('topRightName');
-            if (topRightName) topRightName.textContent = storedEmail;
-            
-            const topRightAvatar = document.getElementById('topRightAvatar');
-            if (topRightAvatar) topRightAvatar.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(storedEmail)}&background=088395&color=fff`;
-        }
-    
-        // Mobile Sidebar Toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const sidebar = document.getElementById('sidebar');
-        const sidebarOverlay = document.getElementById('sidebarOverlay');
-        const closeSidebarBtn = document.getElementById('closeSidebar');
-
-        function closeSidebar() {
-            if (sidebar) sidebar.classList.remove('active');
-            if (sidebarOverlay) sidebarOverlay.classList.remove('active');
-        }
-
-        if (mobileMenuBtn && sidebar && sidebarOverlay) {
-            mobileMenuBtn.addEventListener('click', () => {
-                sidebar.classList.add('active');
-                sidebarOverlay.classList.add('active');
-            });
-
-            sidebarOverlay.addEventListener('click', closeSidebar);
-            
-            if (closeSidebarBtn) {
-                closeSidebarBtn.addEventListener('click', closeSidebar);
-                // Ensure it's visible on mobile
-                if (window.innerWidth <= 992) {
-                    closeSidebarBtn.style.display = 'block';
-                }
-            }
-        }
-
-        // Also close sidebar when a nav link is clicked on mobile
-        document.querySelectorAll('.nav-tab').forEach(tab => {
             tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                panes.forEach(p => p.classList.remove('active'));
+                
+                tab.classList.add('active');
+                const target = tab.getAttribute('data-target');
+                document.getElementById(target).classList.add('active');
+
+                if (titleMap[target]) {
+                    headerTitle.textContent = titleMap[target].t;
+                    headerSubtitle.textContent = titleMap[target].s;
+                }
+
                 if (window.innerWidth <= 992) {
                     closeSidebar();
                 }
             });
         });
 
-    </script>
+        // Mobile Sidebar
+        const mobileBtn = document.getElementById('mobileMenuBtn');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('sidebarOverlay');
 
-    <script>
-        window.addEventListener("load", function() {
-            setTimeout(function() {
-                const loader = document.getElementById('page-loader');
-                if (loader) {
-                    loader.style.opacity = '0';
-                    setTimeout(() => loader.style.display = 'none', 500);
-                }
-            }, 2000);
+        function closeSidebar() {
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+        }
+
+        mobileBtn.addEventListener('click', () => {
+            sidebar.classList.add('active');
+            overlay.classList.add('active');
         });
+        overlay.addEventListener('click', closeSidebar);
+
+        // Load Email
+        const storedEmail = localStorage.getItem('userEmail');
+        if (storedEmail) {
+            const namePart = storedEmail.split('@')[0];
+            const capitalizedName = namePart.charAt(0).toUpperCase() + namePart.slice(1);
+            
+            document.getElementById('topLeftEmail').textContent = storedEmail;
+            document.getElementById('topRightName').textContent = capitalizedName;
+            
+            const avatarUrl = `https://ui-avatars.com/api/?name=${encodeURIComponent(capitalizedName)}&background=05cd99&color=fff`;
+            document.getElementById('topRightAvatar').src = avatarUrl;
+            
+            const settingsEmail = document.getElementById('settingsEmail');
+            if (settingsEmail) settingsEmail.value = storedEmail;
+            
+            const settingsFirstName = document.getElementById('settingsFirstName');
+            if (settingsFirstName) settingsFirstName.value = capitalizedName;
+            
+            const settingsAvatar = document.getElementById('settingsAvatar');
+            if (settingsAvatar) settingsAvatar.src = avatarUrl;
+        }
+
+        // Form Validation & Redirect
+        const settingsForm = document.getElementById('settingsForm');
+        if (settingsForm) {
+            settingsForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                if (this.checkValidity()) {
+                    window.location.href = '404.html';
+                } else {
+                    this.reportValidity();
+                }
+            });
+        }
     </script>
+    <script src="dashboard.js"></script>
+</div>
 </body>
 </html>

@@ -78,6 +78,7 @@
                 errorMsg.style.display = 'block';
             } else {
                 errorMsg.style.display = 'none';
+                localStorage.setItem('userEmail', email);
                 window.location.href = 'login.html';
             }
         });
