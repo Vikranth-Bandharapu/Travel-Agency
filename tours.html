@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Travel | Tours</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Page Loader -->
+    <div id="page-loader">
+        <img src="assets/logo.webp" alt="Loading...">
+    </div>
+
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><img src="assets/logo.webp" alt="Aura Travel" style="height: 40px; width: auto;"></a>
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="destinations.html" class="nav-link">Destinations</a></li>
+                    <li><a href="tours.html" class="nav-link active">Tours</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="mobile-only-nav"><a href="login.html" class="nav-link" style="color: var(--color-primary); background: var(--color-white); padding: 10px; border-radius: 5px; text-align: center; font-weight: 700;">Log In</a></li>
+                    <li class="mobile-only-nav"><a href="signup.html" class="nav-link" style="color: var(--color-white); background: var(--color-primary); padding: 10px; border-radius: 5px; text-align: center; font-weight: 700;">Sign Up</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="login.html" class="btn btn-outline">Log In</a>
+                <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                <div class="mobile-menu-toggle"><i class='bx bx-menu'></i></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. Page Header -->
+    <section class="page-header" style="background-image: url('assets/opt_img_29.webp');">
+        <div class="page-header-content" data-aos="zoom-in">
+            <h1>Curated Tours</h1>
+            <p>From social groups to private bespoke itineraries.</p>
+        </div>
+    </section>
+
+    <!-- 2. Group Tours -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title text-center" data-aos="fade-down">
+                <span class="subtitle">Social & Fun</span>
+                <h2>Small Group Tours</h2>
+            </div>
+            <div class="grid-3">
+                <div class="tour-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="tour-img"><img src="assets/opt_img_3.webp" alt="Italy"></div>
+                    <div class="tour-content"><div class="tour-meta"><span><i class='bx bx-group'></i> Max 12 People</span></div><h3>Taste of Italy</h3><p>7 Days across Rome, Florence, and Venice.</p></div>
+                </div>
+                <div class="tour-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="tour-img"><img src="assets/opt_img_4.webp" alt="Japan"></div>
+                    <div class="tour-content"><div class="tour-meta"><span><i class='bx bx-group'></i> Max 10 People</span></div><h3>Japan Highlights</h3><p>10 Days discovering Tokyo and Kyoto.</p></div>
+                </div>
+                <div class="tour-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="tour-img"><img src="assets/opt_img_23.webp" alt="Peru"></div>
+                    <div class="tour-content"><div class="tour-meta"><span><i class='bx bx-group'></i> Max 14 People</span></div><h3>Inca Trail</h3><p>5 Days trekking to Machu Picchu.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Private Luxury Tours -->
+    <section class="section bg-dark">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <span class="subtitle">Bespoke Experiences</span>
+                    <h2>Private Luxury Tours</h2>
+                    <p style="margin-top: 20px;">Travel on your own terms. Our private tours offer ultimate flexibility, private chauffeured transfers, 5-star accommodations, and a dedicated expert guide for you and your family.</p>
+                    <a href="404.html" class="btn btn-outline" style="border-color: #fff; color: #fff; margin-top: 20px;">Learn More</a>
+                </div>
+                <div class="about-img" data-aos="fade-left">
+                    <img src="assets/opt_img_17.webp" alt="Luxury Travel">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Adventure Expeditions -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title text-center" data-aos="fade-up">
+                <span class="subtitle">Thrill Seekers</span>
+                <h2>Adventure Expeditions</h2>
+            </div>
+            <div class="grid-2">
+                <div class="tour-card" data-aos="flip-right">
+                    <div class="tour-img"><img src="assets/opt_img_2.webp" alt="Safari"></div>
+                    <div class="tour-content"><h3>African Safari</h3><p>Witness the Great Migration in the Serengeti.</p></div>
+                </div>
+                <div class="tour-card" data-aos="flip-left">
+                    <div class="tour-img"><img src="assets/opt_img_30.webp" alt="Everest"></div>
+                    <div class="tour-content"><h3>Everest Base Camp</h3><p>A challenging trek to the roof of the world.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Why Book Our Tours -->
+    <section class="section">
+        <div class="container text-center">
+            <div class="section-title" data-aos="zoom-in">
+                <span class="subtitle">Our Guarantee</span>
+                <h2>Why Book With Us?</h2>
+            </div>
+            <div class="grid-4">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100"><i class='bx bx-check-shield'></i><h4>100% Secure</h4></div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200"><i class='bx bx-support'></i><h4>24/7 Guide Support</h4></div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300"><i class='bx bx-star'></i><h4>5-Star Stays</h4></div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400"><i class='bx bx-bus'></i><h4>Luxury Transport</h4></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Request Form & Footer -->
+    
+    <!-- New Section 7: Last Minute -->
+    <section class="section" style="background: var(--color-secondary); color: #fff;">
+        <div class="container text-center">
+            <h2 data-aos="fade-down" style="color: #fff;">Last Minute Deals</h2>
+            <p data-aos="fade-up" style="margin: 20px 0;">Pack your bags! These exclusive tours leave within the next 30 days.</p>
+            <a href="404.html" class="btn btn-outline" style="border-color: #fff; color: #fff;" data-aos="zoom-in">View Deals</a>
+        </div>
+    </section>
+
+    <!-- New Section 8: Family Friendly -->
+    <section class="section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-img" data-aos="fade-right"><img src="assets/opt_img_16.webp"></div>
+                <div class="about-text" data-aos="fade-left">
+                    <span class="subtitle">For All Ages</span>
+                    <h2>Family Friendly Tours</h2>
+                    <p style="margin-top:20px;">Itineraries specifically designed with kids and teens in mind. Less transit time, engaging activities, and family-sized accommodations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Section 9: Meet Guides -->
+    <section class="section bg-light">
+        <div class="container text-center">
+            <h2 data-aos="fade-up">Meet Your Local Guides</h2>
+            <div class="grid-3" style="margin-top: 40px;">
+                <div class="expert-card" data-aos="flip-up" data-aos-delay="100"><img src="assets/opt_img_31.webp"><h3>Marco (Italy)</h3></div>
+                <div class="expert-card" data-aos="flip-up" data-aos-delay="200"><img src="assets/opt_img_32.webp"><h3>Kenji (Japan)</h3></div>
+                <div class="expert-card" data-aos="flip-up" data-aos-delay="300"><img src="assets/opt_img_33.webp"><h3>Elena (Peru)</h3></div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="newsletter-contact" style="padding: 60px 0;">
+            <div class="glass-panel" data-aos="zoom-in">
+                <h2>Custom Tour Request</h2>
+                <p>Can't find what you're looking for? Let us build it.</p>
+                <form id="tourRequestForm" class="newsletter-form">
+                    <input type="text" id="tourRequestDestination" placeholder="Where do you want to go?" required>
+                    <button type="submit" class="btn btn-primary">Request Itinerary</button>
+                </form>
+                <div id="tourRequestErrorMsg" style="color: #ffffff; font-size: 1rem; margin-top: 15px; display: none; background: #e74c3c; padding: 12px; border-radius: 5px; font-weight: bold; text-align: center;"></div>
+            </div>
+        </div>
+                <div class="footer-inner" style="background-color: #000000; padding: 60px 0 0;">
+                <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col" data-aos="fade-up">
+                    <a href="index.html" class="logo">
+                        <img src="assets/logo.webp" alt="Aura Travel" style="height: 40px; width: auto; margin-bottom: 20px;">
+                    </a>
+                    <p style="color: #A0B2BA; line-height: 1.6; max-width: 250px;">Enterprise luxury travel engineered for exceptional experiences. </p>
+                </div>
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+                    <h3 style="color: #ffffff; font-size: 1.1rem; margin-bottom: 20px;">Quick Links</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 12px;"><a href="index.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Home</a></li>
+                        <li style="margin-bottom: 12px;"><a href="destinations.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Destinations</a></li>
+                        <li style="margin-bottom: 12px;"><a href="tours.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Tours</a></li>
+                        <li style="margin-bottom: 12px;"><a href="services.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Services</a></li>
+                        <li style="margin-bottom: 12px;"><a href="blog.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Blog</a></li>
+                        <li style="margin-bottom: 12px;"><a href="contact.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+                    <h3 style="color: #ffffff; font-size: 1.1rem; margin-bottom: 20px;">Portal</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 12px;"><a href="404.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Login</a></li>
+                        <li style="margin-bottom: 12px;"><a href="404.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Sign Up</a></li>
+                        <li style="margin-bottom: 12px;"><a href="404.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Travel Portal</a></li>
+                        <li style="margin-bottom: 12px;"><a href="404.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Partner Login</a></li>
+                        <li style="margin-bottom: 12px;"><a href="404.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Agent Dashboard</a></li>
+                        <li style="margin-bottom: 12px;"><a href="404.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Submit Inquiry</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+                    <h3 style="color: #ffffff; font-size: 1.1rem; margin-bottom: 20px;">Contact Us</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 12px; color: #A0B2BA;"><i class='bx bx-envelope'></i> support@stackly.com</li>
+                        <li style="margin-bottom: 12px; color: #A0B2BA;"><i class='bx bx-phone'></i> 9182736450</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div style="border-top: 1px solid rgba(255,255,255,0.1); padding: 20px 0; text-align: center; margin-top: 40px; background-color: #000000;">
+            <p style="color: #666; font-size: 0.85rem; letter-spacing: 1px; margin: 0;">&copy; 2026 STACKLY. ALL RIGHTS RESERVED.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('tourRequestForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const dest = document.getElementById('tourRequestDestination').value;
+            const errorMsg = document.getElementById('tourRequestErrorMsg');
+            
+            if (!dest.trim()) {
+                errorMsg.textContent = 'Please enter a destination.';
+                errorMsg.style.display = 'block';
+            } else {
+                errorMsg.style.display = 'none';
+                window.location.href = '404.html';
+            }
+        });
+    </script>
+
+    <script>
+        window.addEventListener("load", function() {
+            setTimeout(function() {
+                const loader = document.getElementById('page-loader');
+                if (loader) {
+                    loader.style.opacity = '0';
+                    setTimeout(() => loader.style.display = 'none', 500);
+                }
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

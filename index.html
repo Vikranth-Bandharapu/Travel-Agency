@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Travel | Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Page Loader -->
+    <div id="page-loader">
+        <img src="assets/logo.webp" alt="Loading...">
+    </div>
+
+    <!-- 1. Header -->
+    <header id="header" class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><img src="assets/logo.webp" alt="Aura Travel" style="height: 40px; width: auto;"></a>
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="destinations.html" class="nav-link">Destinations</a></li>
+                    <li><a href="tours.html" class="nav-link">Tours</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="mobile-only-nav"><a href="login.html" class="nav-link" style="color: var(--color-primary); background: var(--color-white); padding: 10px; border-radius: 5px; text-align: center; font-weight: 700;">Log In</a></li>
+                    <li class="mobile-only-nav"><a href="signup.html" class="nav-link" style="color: var(--color-white); background: var(--color-primary); padding: 10px; border-radius: 5px; text-align: center; font-weight: 700;">Sign Up</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="login.html" class="btn btn-outline">Log In</a>
+                <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                <div class="mobile-menu-toggle"><i class='bx bx-menu'></i></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Hero Banner -->
+    <section class="hero" style="background-image: url('assets/hero_bg.webp');">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 data-aos="fade-down">Discover Your Next <span>Adventure</span></h1>
+            <p data-aos="fade-up" data-aos-delay="200">Experience the world's most luxurious destinations.</p>
+            <div class="search-bar-container" data-aos="zoom-in" data-aos-delay="400">
+                <form class="search-form">
+                    <div class="input-group"><i class='bx bx-map'></i><div class="input-content"><label>Location</label><input type="text" placeholder="Where to?"></div></div>
+                    <div class="input-divider"></div>
+                    <div class="input-group"><i class='bx bx-calendar'></i><div class="input-content"><label>Check In</label><input type="date"></div></div>
+                    <div class="input-divider"></div>
+                    <button type="submit" class="btn btn-primary search-btn"><i class='bx bx-search'></i> Search</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Categories -->
+    <section class="categories section">
+        <div class="container">
+            <div class="section-title text-center" data-aos="fade-up">
+                <span class="subtitle">Explore By Type</span>
+                <h2>Holiday Categories</h2>
+            </div>
+            <div class="grid-4">
+                <div class="category-card" data-aos="flip-left" data-aos-delay="100">
+                    <div class="cat-icon"><i class='bx bx-water'></i></div>
+                    <h3>Beach Relax</h3>
+                </div>
+                <div class="category-card" data-aos="flip-left" data-aos-delay="200">
+                    <div class="cat-icon"><i class='bx bx-landscape'></i></div>
+                    <h3>Mountain Hike</h3>
+                </div>
+                <div class="category-card" data-aos="flip-left" data-aos-delay="300">
+                    <div class="cat-icon"><i class='bx bx-buildings'></i></div>
+                    <h3>City Break</h3>
+                </div>
+                <div class="category-card" data-aos="flip-left" data-aos-delay="400">
+                    <div class="cat-icon"><i class='bx bx-compass'></i></div>
+                    <h3>Safari Adventure</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Destinations -->
+    <section class="destinations section bg-light">
+        <div class="container">
+            <div class="section-title text-center" data-aos="fade-up">
+                <span class="subtitle">Top Locations</span>
+                <h2>Popular Destinations</h2>
+            </div>
+            <div class="grid-3">
+                <div class="dest-card" data-aos="zoom-in-up" data-aos-delay="100">
+                    <img src="assets/dest_paris.webp" alt="Paris">
+                    <div class="dest-info"><h3>Romantic Paris</h3></div>
+                </div>
+                <div class="dest-card" data-aos="zoom-in-up" data-aos-delay="200">
+                    <img src="assets/dest_maldives.webp" alt="Maldives">
+                    <div class="dest-info"><h3>Tropical Paradise</h3></div>
+                </div>
+                <div class="dest-card" data-aos="zoom-in-up" data-aos-delay="300">
+                    <img src="assets/dest_swiss.webp" alt="Swiss Alps">
+                    <div class="dest-info"><h3>Swiss Alps</h3></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Featured Tours -->
+    <section class="tours section">
+        <div class="container">
+            <div class="section-title text-center" data-aos="fade-up">
+                <span class="subtitle">Specially Curated</span>
+                <h2>Featured Tour Packages</h2>
+            </div>
+            <div class="grid-3">
+                <div class="tour-card" data-aos="fade-right" data-aos-delay="100">
+                    <div class="tour-img"><img src="assets/opt_img_3.webp" alt="Venice"></div>
+                    <div class="tour-content"><h3>Magical Venice</h3><p>Explore the romantic canals.</p></div>
+                </div>
+                <div class="tour-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="tour-img"><img src="assets/opt_img_4.webp" alt="Bali"></div>
+                    <div class="tour-content"><h3>Bali Bliss</h3><p>Spiritual culture and pristine beaches.</p></div>
+                </div>
+                <div class="tour-card" data-aos="fade-left" data-aos-delay="300">
+                    <div class="tour-img"><img src="assets/opt_img_23.webp" alt="Norway"></div>
+                    <div class="tour-content"><h3>Northern Lights</h3><p>Witness the spectacular Aurora Borealis.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. About & Stats (NEW) -->
+    <section class="section bg-dark">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <span class="subtitle">About Aura</span>
+                    <h2>Redefining Luxury Travel</h2>
+                    <p style="margin-top: 20px;">We believe travel should be effortless, inspiring, and completely tailored to your desires. Since our inception, we have curated thousands of bespoke itineraries for the most discerning travelers.</p>
+                </div>
+                <div class="about-img" data-aos="fade-left">
+                    <img src="assets/opt_img_17.webp" alt="About Us">
+                </div>
+            </div>
+            <div class="stats-container" data-aos="zoom-in" data-aos-offset="-50">
+                <div class="stat-box"><h3>10K+</h3><p>Happy Travelers</p></div>
+                <div class="stat-box"><h3>50+</h3><p>Countries Covered</p></div>
+                <div class="stat-box"><h3>15+</h3><p>Years Experience</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Services -->
+    <section class="services section">
+        <div class="container text-center">
+            <div class="section-title" data-aos="fade-up">
+                <span class="subtitle">What We Do</span>
+                <h2>Premium Services</h2>
+            </div>
+            <div class="grid-4">
+                <div class="feature-card" data-aos="flip-up" data-aos-delay="100"><i class='bx bx-file'></i><h4>Visa Assist</h4></div>
+                <div class="feature-card" data-aos="flip-up" data-aos-delay="200"><i class='bx bx-plane-alt'></i><h4>Flight Booking</h4></div>
+                <div class="feature-card" data-aos="flip-up" data-aos-delay="300"><i class='bx bx-building-house'></i><h4>Luxury Hotels</h4></div>
+                <div class="feature-card" data-aos="flip-up" data-aos-delay="400"><i class='bx bx-shield-plus'></i><h4>Insurance</h4></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Testimonials -->
+    <section class="testimonials section bg-light">
+        <div class="container">
+            <div class="section-title text-center" data-aos="fade-up"><h2>Client Stories</h2></div>
+            <div class="grid-3">
+                <div class="testimonial-card" data-aos="zoom-in-right"><p>"Magical honeymoon in the Maldives."</p><h4>Sarah J.</h4></div>
+                <div class="testimonial-card" data-aos="zoom-in-up"><p>"Breathtaking trip to the Swiss Alps."</p><h4>Michael C.</h4></div>
+                <div class="testimonial-card" data-aos="zoom-in-left"><p>"Incredibly smooth family vacation."</p><h4>Elena R.</h4></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Footer & Newsletter -->
+    
+    <!-- New Section 10: Meet Our Experts -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title text-center" data-aos="fade-up">
+                <span class="subtitle">Our Team</span>
+                <h2>Meet Our Travel Experts</h2>
+            </div>
+            <div class="grid-3">
+                <div class="expert-card" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="assets/opt_img_24.webp" alt="Michael">
+                    <h3>Michael Scott</h3>
+                    <p>Luxury Travel Director</p>
+                </div>
+                <div class="expert-card" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="assets/opt_img_25.webp" alt="Jim">
+                    <h3>Jim Halpert</h3>
+                    <p>Adventure Specialist</p>
+                </div>
+                <div class="expert-card" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="assets/opt_img_26.webp" alt="Pam">
+                    <h3>Pam Beesley</h3>
+                    <p>Romance & Weddings</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Section 11: Travel Map Placeholder -->
+    <section class="section bg-light text-center">
+        <div class="container" data-aos="fade-up">
+            <span class="subtitle">Global Network</span>
+            <h2>Interactive Travel Map</h2>
+            <div class="calendar-placeholder" style="margin-top: 30px;">
+                <i class='bx bx-world' style="font-size: 3rem;"></i><br>
+                Interactive 3D Globe Placeholder
+            </div>
+        </div>
+    </section>
+
+    <!-- New Section 12: Top FAQ -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title text-center" data-aos="fade-up">
+                <h2>Top Questions</h2>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto;" data-aos="fade-up">
+                <details class="faq-item">
+                    <summary>Do you book flights as well?</summary>
+                    <p>Yes! We handle all logistics including first-class and private aviation.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Are your tours customizable?</summary>
+                    <p>Absolutely. Our private tours are 100% bespoke to your preferences.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>What is your cancellation policy?</summary>
+                    <p>It depends on the package, but we highly recommend our comprehensive travel insurance.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="newsletter-contact">
+            <div class="glass-panel" data-aos="zoom-in">
+                <h2>Subscribe To Our Newsletter</h2>
+                  <form class="newsletter-form" id="newsletterForm">
+                      <input type="email" id="newsletterEmail" placeholder="Your Email" required>
+                      <button type="submit" class="btn btn-primary">Subscribe</button>
+                  </form>
+                  <div id="newsletterErrorMsg" style="color: #ffffff; font-size: 1rem; margin-top: 15px; display: none; background: #e74c3c; padding: 12px; border-radius: 5px; text-align: center; font-weight: bold;"></div>
+            </div>
+        </div>
+                <div class="footer-inner" style="background-color: #000000; padding: 60px 0 0;">
+                <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col" data-aos="fade-up">
+                    <a href="index.html" class="logo">
+                        <img src="assets/logo.webp" alt="Aura Travel" style="height: 40px; width: auto; margin-bottom: 20px;">
+                    </a>
+                    <p style="color: #A0B2BA; line-height: 1.6; max-width: 250px;">Enterprise luxury travel engineered for exceptional experiences. </p>
+                </div>
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+                    <h3 style="color: #ffffff; font-size: 1.1rem; margin-bottom: 20px;">Quick Links</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 12px;"><a href="index.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Home</a></li>
+                        <li style="margin-bottom: 12px;"><a href="destinations.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Destinations</a></li>
+                        <li style="margin-bottom: 12px;"><a href="tours.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Tours</a></li>
+                        <li style="margin-bottom: 12px;"><a href="services.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Services</a></li>
+                        <li style="margin-bottom: 12px;"><a href="blog.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Blog</a></li>
+                        <li style="margin-bottom: 12px;"><a href="contact.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+                    <h3 style="color: #ffffff; font-size: 1.1rem; margin-bottom: 20px;">Portal</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 12px;"><a href="404.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Login</a></li>
+                        <li style="margin-bottom: 12px;"><a href="404.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Sign Up</a></li>
+                        <li style="margin-bottom: 12px;"><a href="404.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Travel Portal</a></li>
+                        <li style="margin-bottom: 12px;"><a href="404.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Partner Login</a></li>
+                        <li style="margin-bottom: 12px;"><a href="404.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Agent Dashboard</a></li>
+                        <li style="margin-bottom: 12px;"><a href="404.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Submit Inquiry</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+                    <h3 style="color: #ffffff; font-size: 1.1rem; margin-bottom: 20px;">Contact Us</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 12px; color: #A0B2BA;"><i class='bx bx-envelope'></i> support@stackly.com</li>
+                        <li style="margin-bottom: 12px; color: #A0B2BA;"><i class='bx bx-phone'></i> 9182736450</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div style="border-top: 1px solid rgba(255,255,255,0.1); padding: 20px 0; text-align: center; margin-top: 40px; background-color: #000000;">
+            <p style="color: #666; font-size: 0.85rem; letter-spacing: 1px; margin: 0;">&copy; 2026 STACKLY. ALL RIGHTS RESERVED.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('newsletterEmail').value;
+            const errorMsg = document.getElementById('newsletterErrorMsg');
+            
+            if (!email.trim() || !email.includes('@')) {
+                errorMsg.textContent = 'Please enter a valid email address.';
+                errorMsg.style.display = 'block';
+            } else {
+                errorMsg.style.display = 'none';
+                window.location.href = '404.html';
+            }
+        });
+    </script>
+
+    <script>
+        window.addEventListener("load", function() {
+            setTimeout(function() {
+                const loader = document.getElementById('page-loader');
+                if (loader) {
+                    loader.style.opacity = '0';
+                    setTimeout(() => loader.style.display = 'none', 500);
+                }
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

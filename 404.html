@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Travel | 404 Not Found</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .error-page {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url('assets/hero_bg.webp') center/cover no-repeat;
+            position: relative;
+            text-align: center;
+        }
+        .error-page::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(10, 35, 46, 0.8);
+        }
+        .error-content {
+            position: relative;
+            z-index: 2;
+            color: var(--color-white);
+        }
+        .error-content h1 {
+            font-size: 8rem;
+            margin-bottom: 0;
+            line-height: 1;
+            color: var(--color-accent);
+        }
+        .error-content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .error-content p {
+            margin-bottom: 30px;
+            color: rgba(255,255,255,0.8);
+        }
+    </style>
+</head>
+<body>
+    <!-- Page Loader -->
+    <div id="page-loader">
+        <img src="assets/logo.webp" alt="Loading...">
+    </div>
+
+    <div class="error-page">
+        <div class="error-content">
+            <h1>404</h1>
+            <h2>Destination Not Found</h2>
+            <p>It looks like you've wandered off the map. This feature is still under construction.</p>
+            <div style="display: flex; gap: 15px; justify-content: center; margin-top: 20px;">
+                <button onclick="history.back()" class="btn btn-outline" style="border-color: #fff; color: #fff;">Go Back</button>
+                <a href="index.html" class="btn btn-primary">Return Home</a>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        window.addEventListener("load", function() {
+            setTimeout(function() {
+                const loader = document.getElementById('page-loader');
+                if (loader) {
+                    loader.style.opacity = '0';
+                    setTimeout(() => loader.style.display = 'none', 500);
+                }
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

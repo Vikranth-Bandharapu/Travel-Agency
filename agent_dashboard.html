@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Travel | Agent Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Page Loader -->
+    <div id="page-loader">
+        <img src="assets/logo.webp" alt="Loading...">
+    </div>
+
+    <div class="dashboard-layout">
+        
+        <!-- Sidebar for Agent -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="logo"><img src="assets/logo.webp" alt="Aura Travel" style="height: 40px; width: auto;"></a>
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li><a href="#" class="nav-tab active" data-target="tab-overview"><i class='bx bx-grid-alt'></i> <span>Dashboard Overview</span></a></li>
+                <li><a href="#" class="nav-tab" data-target="tab-manage-bookings"><i class='bx bx-calendar-check'></i> <span>Manage Bookings</span></a></li>
+                <li><a href="#" class="nav-tab" data-target="tab-clients"><i class='bx bx-user-circle'></i> <span>Client Directory</span></a></li>
+                <li><a href="#" class="nav-tab" data-target="tab-earnings"><i class='bx bx-line-chart'></i> <span>Earnings Report</span></a></li>
+                <li><a href="#" class="nav-tab" data-target="tab-settings"><i class='bx bx-cog'></i> <span>Agency Settings</span></a></li>
+            </ul>
+            
+            <div class="sidebar-footer">
+                <a href="index.html" style="color: #A0B2BA; display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                    <i class='bx bx-log-out'></i> <span>Log Out</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            
+            <!-- Dashboard Header -->
+            <div class="dash-header">
+                <div>
+                    <h2 style="font-size: 2rem; color: #333;" id="dashTitle">Agent Dashboard</h2>
+                    <p style="color: #666;" id="dashSubtitle">Here's an overview of your agency's performance today.</p>
+                    <p style="color: var(--color-primary); font-size: 0.85rem; font-weight: 600; margin-top: 5px;" id="topLeftEmail"></p>
+                </div>
+                <div class="user-profile-sm">
+                    <img id="topRightAvatar" src="https://ui-avatars.com/api/?name=User&background=088395&color=fff" alt="User">
+                    <div style="text-align: right;">
+                        <div id="topRightName" style="font-weight: 600; color: #333; line-height: 1.2;">Agent Smith</div>
+                        <div style="font-size: 0.8rem; color: #666;">Senior Travel Consultant</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 1: OVERVIEW -->
+            <div id="tab-overview" class="tab-content active">
+                <div class="dash-stats">
+                    <div class="dash-stat-card">
+                        <div class="dash-stat-icon" style="background: rgba(46, 138, 87, 0.1); color: var(--color-emerald);"><i class='bx bx-dollar-circle'></i></div>
+                        <div class="dash-stat-info">
+                            <h4>Monthly Revenue</h4>
+                            <h2>$84,500</h2>
+                        </div>
+                    </div>
+                    <div class="dash-stat-card">
+                        <div class="dash-stat-icon" style="background: rgba(229, 124, 35, 0.1); color: var(--color-accent);"><i class='bx bx-time-five'></i></div>
+                        <div class="dash-stat-info">
+                            <h4>Pending Approvals</h4>
+                            <h2>5</h2>
+                        </div>
+                    </div>
+                    <div class="dash-stat-card">
+                        <div class="dash-stat-icon" style="background: rgba(8, 131, 149, 0.1); color: var(--color-primary);"><i class='bx bx-group'></i></div>
+                        <div class="dash-stat-info">
+                            <h4>Active Clients</h4>
+                            <h2>124</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dash-section">
+                    <div class="dash-section-header">
+                        <h3 style="color: #333; font-size: 1.3rem;">Recent Booking Requests</h3>
+                        <a href="#" class="nav-trigger" data-target="tab-manage-bookings" style="color: var(--color-secondary); font-size: 0.9rem; font-weight: 600;">View All Requests</a>
+                    </div>
+                    
+                    <div class="data-table-wrapper">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Client Name</th>
+                                    <th>Destination</th>
+                                    <th>Dates</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>John Doe</strong><br><span style="font-size:0.8rem; color:#666;">john.doe@example.com</span></td>
+                                    <td>Swiss Alps Cabin</td>
+                                    <td>Dec 10 - Dec 17, 2026</td>
+                                    <td>$4,200</td>
+                                    <td><span class="badge badge-warning">Awaiting Approval</span></td>
+                                    <td>
+                                        <div style="display:flex; gap:10px;">
+                                            <button class="action-btn btn-approve" onclick="alert('Booking Approved!')">Approve</button>
+                                            <button class="action-btn btn-decline" onclick="alert('Booking Declined.')">Decline</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 2: MANAGE BOOKINGS -->
+            <div id="tab-manage-bookings" class="tab-content">
+                <div class="dash-section">
+                    <h3 style="color: #333; font-size: 1.3rem; margin-bottom: 20px;">All Client Bookings</h3>
+                    <div class="data-table-wrapper">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Booking ID</th>
+                                    <th>Client Name</th>
+                                    <th>Destination</th>
+                                    <th>Dates</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#B-1099</td>
+                                    <td><strong>John Doe</strong></td>
+                                    <td>Swiss Alps Cabin</td>
+                                    <td>Dec 10 - Dec 17, 2026</td>
+                                    <td>$4,200</td>
+                                    <td><span class="badge badge-warning">Awaiting</span></td>
+                                    <td><button class="action-btn btn-approve" onclick="alert('Approved!')">Approve</button></td>
+                                </tr>
+                                <tr>
+                                    <td>#B-1098</td>
+                                    <td><strong>Sarah Lee</strong></td>
+                                    <td>Bali Bliss Retreat</td>
+                                    <td>Mar 05 - Mar 15, 2026</td>
+                                    <td>$3,800</td>
+                                    <td><span class="badge badge-success">Confirmed</span></td>
+                                    <td><button class="action-btn btn-decline" onclick="window.location.href='404.html'">View</button></td>
+                                </tr>
+                                <tr>
+                                    <td>#B-1097</td>
+                                    <td><strong>David Chen</strong></td>
+                                    <td>Magical Venice</td>
+                                    <td>Nov 10 - Nov 17, 2026</td>
+                                    <td>$5,100</td>
+                                    <td><span class="badge badge-success">Confirmed</span></td>
+                                    <td><button class="action-btn btn-decline" onclick="window.location.href='404.html'">View</button></td>
+                                </tr>
+                                <tr>
+                                    <td>#B-1096</td>
+                                    <td><strong>Emma Stone</strong></td>
+                                    <td>Paris Weekend</td>
+                                    <td>Oct 12 - Oct 15, 2026</td>
+                                    <td>$2,200</td>
+                                    <td><span class="badge badge-warning">Awaiting</span></td>
+                                    <td><button class="action-btn btn-approve" onclick="alert('Approved!')">Approve</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 3: CLIENT DIRECTORY -->
+            <div id="tab-clients" class="tab-content">
+                <div class="dash-section">
+                    <h3 style="color: #333; font-size: 1.3rem; margin-bottom: 20px;">Client Directory</h3>
+                    <div class="client-grid">
+                        <div class="client-card">
+                            <img src="https://ui-avatars.com/api/?name=John+Doe&background=random" alt="John">
+                            <h4>John Doe</h4>
+                            <p>john.doe@example.com</p>
+                            <span class="badge badge-success">Gold Member</span>
+                            <p style="margin-top:10px; font-weight:600;">Total Spend: $14,200</p>
+                        </div>
+                        <div class="client-card">
+                            <img src="https://ui-avatars.com/api/?name=Sarah+Lee&background=random" alt="Sarah">
+                            <h4>Sarah Lee</h4>
+                            <p>sarah@example.com</p>
+                            <span class="badge badge-warning">Silver Member</span>
+                            <p style="margin-top:10px; font-weight:600;">Total Spend: $8,500</p>
+                        </div>
+                        <div class="client-card">
+                            <img src="https://ui-avatars.com/api/?name=David+Chen&background=random" alt="David">
+                            <h4>David Chen</h4>
+                            <p>david.c@example.com</p>
+                            <span class="badge badge-success">Platinum Member</span>
+                            <p style="margin-top:10px; font-weight:600;">Total Spend: $35,100</p>
+                        </div>
+                        <div class="client-card">
+                            <img src="https://ui-avatars.com/api/?name=Emma+Stone&background=random" alt="Emma">
+                            <h4>Emma Stone</h4>
+                            <p>emma.s@example.com</p>
+                            <span class="badge badge-warning">Silver Member</span>
+                            <p style="margin-top:10px; font-weight:600;">Total Spend: $6,200</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 4: EARNINGS REPORT -->
+            <div id="tab-earnings" class="tab-content">
+                <div class="dash-section">
+                    <h3 style="color: #333; font-size: 1.3rem; margin-bottom: 20px;">Earnings Report (2026)</h3>
+                    <div class="data-table-wrapper">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Month</th>
+                                    <th>Bookings</th>
+                                    <th>Gross Revenue</th>
+                                    <th>Agency Commission (15%)</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>July</strong></td>
+                                    <td>42</td>
+                                    <td>$84,500</td>
+                                    <td>$12,675</td>
+                                    <td><span class="badge badge-warning">Processing</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>June</strong></td>
+                                    <td>38</td>
+                                    <td>$76,200</td>
+                                    <td>$11,430</td>
+                                    <td><span class="badge badge-success">Paid Out</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>May</strong></td>
+                                    <td>55</td>
+                                    <td>$110,000</td>
+                                    <td>$16,500</td>
+                                    <td><span class="badge badge-success">Paid Out</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 5: SETTINGS -->
+            <div id="tab-settings" class="tab-content">
+                <form class="settings-form" action="404.html">
+                    <h3 style="color: #333; font-size: 1.3rem; margin-bottom: 20px;">Agency Settings</h3>
+                    <div class="form-group">
+                        <label>Agent Name</label>
+                        <input type="text" value="Agent Smith">
+                    </div>
+                    <div class="form-group">
+                        <label>Business Email</label>
+                        <input type="email" id="settingsEmail" value="smith@auratravel.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Payout Bank Account (IBAN)</label>
+                        <input type="text" value="US12 3456 7890 1234">
+                    </div>
+                    <div class="form-group" style="display:flex; align-items:center; gap:10px;">
+                        <input type="checkbox" checked style="width:auto;">
+                        <span>Receive new booking alerts via email</span>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Save Changes</button>
+                </form>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        // Tab Switching Logic
+        const tabs = document.querySelectorAll('.nav-tab');
+        const contents = document.querySelectorAll('.tab-content');
+        const triggers = document.querySelectorAll('.nav-trigger');
+        const title = document.getElementById('dashTitle');
+        const subtitle = document.getElementById('dashSubtitle');
+
+        const titleMap = {
+            'tab-overview': { t: 'Agent Dashboard', s: 'Here\'s an overview of your agency\'s performance today.' },
+            'tab-manage-bookings': { t: 'Manage Bookings', s: 'Review and approve client itineraries.' },
+            'tab-clients': { t: 'Client Directory', s: 'View your client base and loyalty tiers.' },
+            'tab-earnings': { t: 'Earnings Report', s: 'Financial breakdown and commission tracking.' },
+            'tab-settings': { t: 'Agency Settings', s: 'Manage your agent profile and payouts.' }
+        };
+
+        function switchTab(targetId) {
+            // Remove active from all tabs and contents
+            tabs.forEach(t => t.classList.remove('active'));
+            contents.forEach(c => c.classList.remove('active'));
+
+            // Add active to target
+            const activeTab = document.querySelector(`.nav-tab[data-target="${targetId}"]`);
+            if (activeTab) activeTab.classList.add('active');
+            document.getElementById(targetId).classList.add('active');
+
+            // Update Header
+            if (titleMap[targetId]) {
+                title.textContent = titleMap[targetId].t;
+                subtitle.textContent = titleMap[targetId].s;
+            }
+        }
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', (e) => {
+                e.preventDefault();
+                switchTab(tab.getAttribute('data-target'));
+            });
+        });
+
+        // "View All" triggers
+        triggers.forEach(trigger => {
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                switchTab(trigger.getAttribute('data-target'));
+            });
+        });
+
+        // Load stored email
+        const storedEmail = localStorage.getItem('userEmail');
+        if (storedEmail) {
+            const settingsEmail = document.getElementById('settingsEmail');
+            if (settingsEmail) settingsEmail.value = storedEmail;
+            
+            const topLeftEmail = document.getElementById('topLeftEmail');
+            if (topLeftEmail) topLeftEmail.textContent = 'Logged in as: ' + storedEmail;
+            
+            const topRightName = document.getElementById('topRightName');
+            if (topRightName) topRightName.textContent = storedEmail;
+            
+            const topRightAvatar = document.getElementById('topRightAvatar');
+            if (topRightAvatar) topRightAvatar.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(storedEmail)}&background=088395&color=fff`;
+        }
+    </script>
+
+    <script>
+        window.addEventListener("load", function() {
+            setTimeout(function() {
+                const loader = document.getElementById('page-loader');
+                if (loader) {
+                    loader.style.opacity = '0';
+                    setTimeout(() => loader.style.display = 'none', 500);
+                }
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

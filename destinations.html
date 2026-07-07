@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Travel | Destinations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Page Loader -->
+    <div id="page-loader">
+        <img src="assets/logo.webp" alt="Loading...">
+    </div>
+
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><img src="assets/logo.webp" alt="Aura Travel" style="height: 40px; width: auto;"></a>
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="destinations.html" class="nav-link active">Destinations</a></li>
+                    <li><a href="tours.html" class="nav-link">Tours</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="mobile-only-nav"><a href="login.html" class="nav-link" style="color: var(--color-primary); background: var(--color-white); padding: 10px; border-radius: 5px; text-align: center; font-weight: 700;">Log In</a></li>
+                    <li class="mobile-only-nav"><a href="signup.html" class="nav-link" style="color: var(--color-white); background: var(--color-primary); padding: 10px; border-radius: 5px; text-align: center; font-weight: 700;">Sign Up</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="login.html" class="btn btn-outline">Log In</a>
+                <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                <div class="mobile-menu-toggle"><i class='bx bx-menu'></i></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. Page Header -->
+    <section class="page-header" style="background-image: url('assets/opt_img_1.webp');">
+        <div class="page-header-content" data-aos="zoom-in">
+            <h1>Our Destinations</h1>
+            <p>Explore the most breathtaking places on Earth.</p>
+        </div>
+    </section>
+
+    <!-- 2. Explore by Region -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title text-center" data-aos="fade-up">
+                <span class="subtitle">Global Reach</span>
+                <h2>Explore By Region</h2>
+            </div>
+            <div class="grid-2">
+                <div class="region-card" data-aos="fade-right">
+                    <img src="assets/opt_img_15.webp" alt="Europe">
+                    <h3>Europe</h3>
+                </div>
+                <div class="region-card" data-aos="fade-left">
+                    <img src="assets/opt_img_16.webp" alt="Asia">
+                    <h3>Asia</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Top Rated Destinations -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title text-center" data-aos="fade-up">
+                <span class="subtitle">Fan Favorites</span>
+                <h2>Top Rated Destinations</h2>
+            </div>
+            <div class="grid-3">
+                <div class="dest-card" data-aos="flip-left" data-aos-delay="100">
+                    <img src="assets/dest_paris.webp" alt="Paris">
+                    <div class="dest-info"><h3>Paris, France</h3></div>
+                </div>
+                <div class="dest-card" data-aos="flip-left" data-aos-delay="200">
+                    <img src="assets/dest_maldives.webp" alt="Maldives">
+                    <div class="dest-info"><h3>Maldives</h3></div>
+                </div>
+                <div class="dest-card" data-aos="flip-left" data-aos-delay="300">
+                    <img src="assets/dest_swiss.webp" alt="Swiss Alps">
+                    <div class="dest-info"><h3>Switzerland</h3></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Hidden Gems -->
+    <section class="section bg-dark">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-img" data-aos="zoom-in-right">
+                    <img src="assets/opt_img_2.webp" alt="Hidden Gems">
+                </div>
+                <div class="about-text" data-aos="fade-left">
+                    <span class="subtitle">Off the Beaten Path</span>
+                    <h2>Hidden Gems</h2>
+                    <p style="margin-top: 20px;">Escape the crowds and discover the untouched beauty of secluded islands, hidden mountain villages, and pristine rainforests. We specialize in curating journeys to places few have seen.</p>
+                    <a href="404.html" class="btn btn-primary" style="margin-top: 20px;">Explore Gems</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Seasonal Escapes -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title text-center" data-aos="fade-down">
+                <span class="subtitle">Time it Right</span>
+                <h2>Seasonal Escapes</h2>
+            </div>
+            <div class="grid-2">
+                <div class="tour-card" data-aos="slide-up">
+                    <div class="tour-img"><img src="assets/opt_img_17.webp" alt="Summer"></div>
+                    <div class="tour-content"><h3>Endless Summer</h3><p>Chase the sun to the Mediterranean and the Caribbean.</p></div>
+                </div>
+                <div class="tour-card" data-aos="slide-up" data-aos-delay="200">
+                    <div class="tour-img"><img src="assets/opt_img_18.webp" alt="Winter"></div>
+                    <div class="tour-content"><h3>Winter Wonderlands</h3><p>Experience the magic of the Arctic and ski the finest Alps.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Footer & CTA -->
+    
+    <!-- New Section 7: Eco-Destinations -->
+    <section class="section">
+        <div class="container text-center">
+            <div class="section-title" data-aos="fade-up">
+                <span class="subtitle">Sustainable Travel</span>
+                <h2>Eco-Destinations</h2>
+                <p style="max-width: 600px; margin: 15px auto;">Discover breathtaking locations dedicated to preserving their natural beauty and supporting local communities.</p>
+            </div>
+            <div class="grid-2">
+                <div class="tour-card" data-aos="fade-right"><img src="assets/opt_img_4.webp" style="width:100%; height:250px; object-fit:cover;"></div>
+                <div class="tour-card" data-aos="fade-left"><img src="assets/opt_img_5.webp" style="width:100%; height:250px; object-fit:cover;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Section 8: Photo Gallery -->
+    <section class="section bg-dark text-center">
+        <div class="container">
+            <h2 style="color: #fff; margin-bottom: 30px;" data-aos="zoom-in">Travelers' Gallery</h2>
+            <div class="gallery-grid" data-aos="fade-up">
+                <div class="gallery-item"><img src="assets/opt_img_19.webp"></div>
+                <div class="gallery-item"><img src="assets/opt_img_20.webp"></div>
+                <div class="gallery-item"><img src="assets/opt_img_21.webp"></div>
+                <div class="gallery-item"><img src="assets/opt_img_22.webp"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Section 9: Safety -->
+    <section class="section bg-light">
+        <div class="container text-center" data-aos="fade-up">
+            <i class='bx bx-check-shield' style="font-size: 4rem; color: var(--color-primary);"></i>
+            <h2>Travel Safety & Advisories</h2>
+            <p style="max-width: 700px; margin: 20px auto;">We actively monitor global health and safety guidelines to ensure your trips are risk-free. Our on-the-ground teams are available 24/7 in case of emergencies.</p>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="newsletter-contact" style="padding: 60px 0;">
+            <div class="glass-panel" data-aos="zoom-in">
+                <h2>Ready to Start Planning?</h2>
+                <button class="btn btn-primary" style="margin-top: 20px;" onclick="window.location.href=\'404.html\'">Contact Our Experts</button>
+            </div>
+        </div>
+                <div class="footer-inner" style="background-color: #000000; padding: 60px 0 0;">
+                <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col" data-aos="fade-up">
+                    <a href="index.html" class="logo">
+                        <img src="assets/logo.webp" alt="Aura Travel" style="height: 40px; width: auto; margin-bottom: 20px;">
+                    </a>
+                    <p style="color: #A0B2BA; line-height: 1.6; max-width: 250px;">Enterprise luxury travel engineered for exceptional experiences. </p>
+                </div>
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+                    <h3 style="color: #ffffff; font-size: 1.1rem; margin-bottom: 20px;">Quick Links</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 12px;"><a href="index.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Home</a></li>
+                        <li style="margin-bottom: 12px;"><a href="destinations.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Destinations</a></li>
+                        <li style="margin-bottom: 12px;"><a href="tours.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Tours</a></li>
+                        <li style="margin-bottom: 12px;"><a href="services.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Services</a></li>
+                        <li style="margin-bottom: 12px;"><a href="blog.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Blog</a></li>
+                        <li style="margin-bottom: 12px;"><a href="contact.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+                    <h3 style="color: #ffffff; font-size: 1.1rem; margin-bottom: 20px;">Portal</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 12px;"><a href="404.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Login</a></li>
+                        <li style="margin-bottom: 12px;"><a href="404.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Sign Up</a></li>
+                        <li style="margin-bottom: 12px;"><a href="404.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Travel Portal</a></li>
+                        <li style="margin-bottom: 12px;"><a href="404.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Partner Login</a></li>
+                        <li style="margin-bottom: 12px;"><a href="404.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Agent Dashboard</a></li>
+                        <li style="margin-bottom: 12px;"><a href="404.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Submit Inquiry</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+                    <h3 style="color: #ffffff; font-size: 1.1rem; margin-bottom: 20px;">Contact Us</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 12px; color: #A0B2BA;"><i class='bx bx-envelope'></i> support@stackly.com</li>
+                        <li style="margin-bottom: 12px; color: #A0B2BA;"><i class='bx bx-phone'></i> 9182736450</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div style="border-top: 1px solid rgba(255,255,255,0.1); padding: 20px 0; text-align: center; margin-top: 40px; background-color: #000000;">
+            <p style="color: #666; font-size: 0.85rem; letter-spacing: 1px; margin: 0;">&copy; 2026 STACKLY. ALL RIGHTS RESERVED.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        window.addEventListener("load", function() {
+            setTimeout(function() {
+                const loader = document.getElementById('page-loader');
+                if (loader) {
+                    loader.style.opacity = '0';
+                    setTimeout(() => loader.style.display = 'none', 500);
+                }
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

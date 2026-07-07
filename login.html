@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Travel | Log In</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Page Loader -->
+    <div id="page-loader">
+        <img src="assets/logo.webp" alt="Loading...">
+    </div>
+
+    <!-- Back to Home -->
+    <a href="index.html" style="position: absolute; top: 30px; left: 40px; color: #fff; z-index: 10; display: flex; align-items: center; gap: 5px; font-weight: 500; text-decoration: none;">
+        <i class='bx bx-left-arrow-alt' style="font-size: 1.5rem;"></i> Back to Home
+    </a>
+
+    <div class="auth-page">
+        <div class="auth-card" data-aos="zoom-in">
+            <h2>Welcome Back</h2>
+            <p>Select your role and log in to continue.</p>
+            
+            <form class="auth-form" id="loginForm">
+                <div class="form-group">
+                    <label>Role</label>
+                    <select id="userRole" required>
+                        <option value="traveler">Traveler</option>
+                        <option value="agent">Travel Agent</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="loginEmail" placeholder="hello@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="••••••••" required>
+                </div>
+                
+                <div class="auth-actions">
+                    <label style="display: flex; align-items: center; gap: 5px; font-weight: 400;">
+                        <input type="checkbox" style="width: auto;"> Remember me
+                    </label>
+                    <a href="404.html">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Log In</button>
+            </form>
+
+            <div style="margin: 20px 0; display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.5); font-size: 0.8rem;">
+                <div style="flex:1; height:1px; background: rgba(255,255,255,0.2);"></div>
+                OR CONTINUE WITH
+                <div style="flex:1; height:1px; background: rgba(255,255,255,0.2);"></div>
+            </div>
+
+            <div class="auth-social">
+                <div class="btn-social" onclick="window.location.href='404.html'"><i class='bx bxl-google'></i> Google</div>
+                <div class="btn-social" onclick="window.location.href='404.html'"><i class='bx bxl-apple'></i> Apple</div>
+            </div>
+
+            <div class="auth-footer">
+                Don't have an account? <a href="signup.html">Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Role-based routing logic
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent standard form submission
+            const role = document.getElementById('userRole').value;
+            const email = document.getElementById('loginEmail').value;
+            localStorage.setItem('userEmail', email);
+            
+            if (role === 'agent') {
+                window.location.href = 'agent_dashboard.html';
+            } else {
+                window.location.href = 'dashboard.html';
+            }
+        });
+    </script>
+
+    <script>
+        window.addEventListener("load", function() {
+            setTimeout(function() {
+                const loader = document.getElementById('page-loader');
+                if (loader) {
+                    loader.style.opacity = '0';
+                    setTimeout(() => loader.style.display = 'none', 500);
+                }
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

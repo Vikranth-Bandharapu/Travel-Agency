@@ -1,0 +1,1 @@
+const fs=require('fs'); const files=fs.readdirSync('.').filter(f=>f.endsWith('.html')); files.forEach(f => { const c=fs.readFileSync(f, 'utf8'); const m=c.match(/<div class="container" style="margin-top: 50px;">[\s\S]*?<\/footer>/); if(m) console.log(f, 'MATCH'); else console.log(f, 'NO MATCH'); });
