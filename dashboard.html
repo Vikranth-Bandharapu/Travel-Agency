@@ -17,9 +17,11 @@
     <div class="dashboard-layout">
         
         <!-- Sidebar -->
-        <aside class="sidebar">
-            <div class="sidebar-header">
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header" style="display: flex; justify-content: space-between; align-items: center;">
                 <a href="index.html" class="logo"><img src="assets/logo.webp" alt="Aura Travel" style="height: 40px; width: auto;"></a>
+                <i class='bx bx-x d-lg-none' id="closeSidebar" style="font-size: 2rem; color: white; cursor: pointer; display: none;"></i>
             </div>
             
             <ul class="sidebar-menu">
@@ -39,6 +41,13 @@
 
         <!-- Main Content -->
         <main class="main-content">
+
+            <!-- Mobile Header -->
+            <div class="mobile-dash-header d-lg-none" id="mobileHeader">
+                <a href="index.html"><img src="assets/logo.webp" alt="Aura Travel" class="mobile-dash-logo"></a>
+                <i class='bx bx-menu mobile-dash-toggle' id="mobileMenuBtn"></i>
+            </div>
+    
             
             <!-- Dashboard Header -->
             <div class="dash-header">
@@ -58,6 +67,28 @@
 
             <!-- TAB 1: OVERVIEW -->
             <div id="tab-overview" class="tab-content active">
+                
+                <!-- Upcoming Adventure Card -->
+                <div class="dash-section" style="background: url('assets/opt_img_12.webp') center/cover; border-radius: var(--radius-md); padding: 40px; color: white; position: relative; overflow: hidden; margin-bottom: 30px; box-shadow: var(--shadow-strong);">
+                    <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(to right, rgba(10,35,46,0.95), rgba(10,35,46,0.3)); z-index: 1;"></div>
+                    <div style="position: relative; z-index: 2;">
+                        <span style="background: var(--color-accent); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; margin-bottom: 15px; display: inline-block;">NEXT ADVENTURE</span>
+                        <h2 style="font-size: 2.5rem; margin-bottom: 10px; font-family: var(--font-secondary);">Santorini Premium Escape</h2>
+                        <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 25px;"><i class='bx bx-calendar'></i> August 14 - August 21, 2026</p>
+                        <div style="display: flex; gap: 15px;">
+                            <div style="text-align: center; background: rgba(255,255,255,0.1); backdrop-filter: blur(5px); padding: 15px; border-radius: 10px; min-width: 80px;">
+                                <h3 style="font-size: 1.8rem; margin:0;">38</h3>
+                                <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px;">Days</span>
+                            </div>
+                            <div style="text-align: center; background: rgba(255,255,255,0.1); backdrop-filter: blur(5px); padding: 15px; border-radius: 10px; min-width: 80px;">
+                                <h3 style="font-size: 1.8rem; margin:0;">12</h3>
+                                <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px;">Hrs</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" style="margin-top: 30px; padding: 10px 25px; font-size: 0.9rem;">View Itinerary</button>
+                    </div>
+                </div>
+        
                 <div class="dash-stats">
                     <div class="dash-stat-card">
                         <div class="dash-stat-icon"><i class='bx bx-plane-take-off'></i></div>
@@ -312,6 +343,44 @@
             const topRightAvatar = document.getElementById('topRightAvatar');
             if (topRightAvatar) topRightAvatar.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(storedEmail)}&background=E57C23&color=fff`;
         }
+    
+        // Mobile Sidebar Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const sidebar = document.getElementById('sidebar');
+        const sidebarOverlay = document.getElementById('sidebarOverlay');
+        const closeSidebarBtn = document.getElementById('closeSidebar');
+
+        function closeSidebar() {
+            if (sidebar) sidebar.classList.remove('active');
+            if (sidebarOverlay) sidebarOverlay.classList.remove('active');
+        }
+
+        if (mobileMenuBtn && sidebar && sidebarOverlay) {
+            mobileMenuBtn.addEventListener('click', () => {
+                sidebar.classList.add('active');
+                sidebarOverlay.classList.add('active');
+            });
+
+            sidebarOverlay.addEventListener('click', closeSidebar);
+            
+            if (closeSidebarBtn) {
+                closeSidebarBtn.addEventListener('click', closeSidebar);
+                // Ensure it's visible on mobile
+                if (window.innerWidth <= 992) {
+                    closeSidebarBtn.style.display = 'block';
+                }
+            }
+        }
+
+        // Also close sidebar when a nav link is clicked on mobile
+        document.querySelectorAll('.nav-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                if (window.innerWidth <= 992) {
+                    closeSidebar();
+                }
+            });
+        });
+
     </script>
 
     <script>

@@ -17,9 +17,11 @@
     <div class="dashboard-layout">
         
         <!-- Sidebar for Agent -->
-        <aside class="sidebar">
-            <div class="sidebar-header">
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header" style="display: flex; justify-content: space-between; align-items: center;">
                 <a href="index.html" class="logo"><img src="assets/logo.webp" alt="Aura Travel" style="height: 40px; width: auto;"></a>
+                <i class='bx bx-x d-lg-none' id="closeSidebar" style="font-size: 2rem; color: white; cursor: pointer; display: none;"></i>
             </div>
             
             <ul class="sidebar-menu">
@@ -39,6 +41,13 @@
 
         <!-- Main Content -->
         <main class="main-content">
+
+            <!-- Mobile Header -->
+            <div class="mobile-dash-header d-lg-none" id="mobileHeader">
+                <a href="index.html"><img src="assets/logo.webp" alt="Aura Travel" class="mobile-dash-logo"></a>
+                <i class='bx bx-menu mobile-dash-toggle' id="mobileMenuBtn"></i>
+            </div>
+    
             
             <!-- Dashboard Header -->
             <div class="dash-header">
@@ -119,6 +128,113 @@
                     </div>
                 </div>
             </div>
+
+            
+                <div class="grid-2" style="margin-top: 30px;">
+                    <div class="dash-section">
+                        <div class="dash-section-header">
+                            <h3 style="color: #333; font-size: 1.3rem;">Recent Client Inquiries</h3>
+                            <a href="#" style="color: var(--color-secondary); font-size: 0.9rem; font-weight: 600;">View All</a>
+                        </div>
+                        <div class="booking-list">
+                            <div class="booking-item" style="align-items: flex-start;">
+                                <img src="https://ui-avatars.com/api/?name=Sarah+J&background=random" style="border-radius: 50%;">
+                                <div class="booking-info">
+                                    <h4>Sarah Jenkins</h4>
+                                    <p style="margin-bottom: 5px; color: #666; font-style: italic;">"I am looking for a family tour in Japan this December..."</p>
+                                    <span style="font-size: 0.8rem; color: #999;"><i class='bx bx-time'></i> 2 hours ago</span>
+                                </div>
+                            </div>
+                            <div class="booking-item" style="align-items: flex-start;">
+                                <img src="https://ui-avatars.com/api/?name=Michael+T&background=random" style="border-radius: 50%;">
+                                <div class="booking-info">
+                                    <h4>Michael Torres</h4>
+                                    <p style="margin-bottom: 5px; color: #666; font-style: italic;">"Can we upgrade our Maldives resort to a water villa?"</p>
+                                    <span style="font-size: 0.8rem; color: #999;"><i class='bx bx-time'></i> 5 hours ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dash-section">
+                        <div class="dash-section-header">
+                            <h3 style="color: #333; font-size: 1.3rem;">Top Performing Packages</h3>
+                        </div>
+                        <div class="booking-list">
+                            <div class="booking-item">
+                                <img src="assets/opt_img_12.webp" alt="Santorini">
+                                <div class="booking-info">
+                                    <h4>Santorini Premium Escape</h4>
+                                    <p style="color: #666;">42 Bookings this month</p>
+                                </div>
+                                <div style="color: var(--color-emerald); font-weight: 600; font-size: 1.1rem;"><i class='bx bx-trending-up'></i> 12%</div>
+                            </div>
+                            <div class="booking-item">
+                                <img src="assets/opt_img_13.webp" alt="Venice">
+                                <div class="booking-info">
+                                    <h4>Magical Venice & Rome</h4>
+                                    <p style="color: #666;">28 Bookings this month</p>
+                                </div>
+                                <div style="color: var(--color-emerald); font-weight: 600; font-size: 1.1rem;"><i class='bx bx-trending-up'></i> 5%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            
+                <!-- Quick Actions & Upcoming -->
+                <div class="grid-2" style="margin-top: 30px;">
+                    <!-- Quick Actions -->
+                    <div class="dash-section">
+                        <h3 style="color: #333; font-size: 1.3rem; margin-bottom: 20px;">Quick Actions</h3>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                            <button class="btn btn-primary" style="padding: 15px; font-size: 0.9rem; border-radius: 8px; display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                                <i class='bx bx-file-blank' style="font-size: 1.8rem;"></i> Create Quote
+                            </button>
+                            <button class="btn btn-secondary" style="background: rgba(10,35,46,0.1); color: var(--color-primary); padding: 15px; font-size: 0.9rem; border-radius: 8px; display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                                <i class='bx bx-message-square-dots' style="font-size: 1.8rem;"></i> Message Client
+                            </button>
+                            <button class="btn btn-secondary" style="background: rgba(10,35,46,0.1); color: var(--color-primary); padding: 15px; font-size: 0.9rem; border-radius: 8px; display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                                <i class='bx bx-calendar-event' style="font-size: 1.8rem;"></i> Schedule Call
+                            </button>
+                            <button class="btn btn-secondary" style="background: rgba(10,35,46,0.1); color: var(--color-primary); padding: 15px; font-size: 0.9rem; border-radius: 8px; display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                                <i class='bx bx-money' style="font-size: 1.8rem;"></i> Send Invoice
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Upcoming Departures -->
+                    <div class="dash-section">
+                        <div class="dash-section-header">
+                            <h3 style="color: #333; font-size: 1.3rem;">Upcoming Departures (Next 7 Days)</h3>
+                        </div>
+                        <div class="booking-list">
+                            <div class="booking-item">
+                                <div style="background: rgba(229, 124, 35, 0.1); color: var(--color-accent); padding: 15px; border-radius: 8px; font-weight: bold; text-align: center; min-width: 60px;">
+                                    <div style="font-size: 1.5rem;">12</div>
+                                    <div style="font-size: 0.7rem; text-transform: uppercase;">Aug</div>
+                                </div>
+                                <div class="booking-info">
+                                    <h4>The Henderson Family (4)</h4>
+                                    <p>Flight AF120 • Paris CDG</p>
+                                </div>
+                                <div class="booking-status status-upcoming">Tomorrow</div>
+                            </div>
+                            <div class="booking-item">
+                                <div style="background: rgba(10, 35, 46, 0.1); color: var(--color-primary); padding: 15px; border-radius: 8px; font-weight: bold; text-align: center; min-width: 60px;">
+                                    <div style="font-size: 1.5rem;">15</div>
+                                    <div style="font-size: 0.7rem; text-transform: uppercase;">Aug</div>
+                                </div>
+                                <div class="booking-info">
+                                    <h4>David Smith</h4>
+                                    <p>Flight EK30 • Dubai DXB</p>
+                                </div>
+                                <div class="booking-status status-completed">In 4 Days</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
 
             <!-- TAB 2: MANAGE BOOKINGS -->
             <div id="tab-manage-bookings" class="tab-content">
@@ -350,6 +466,44 @@
             const topRightAvatar = document.getElementById('topRightAvatar');
             if (topRightAvatar) topRightAvatar.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(storedEmail)}&background=088395&color=fff`;
         }
+    
+        // Mobile Sidebar Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const sidebar = document.getElementById('sidebar');
+        const sidebarOverlay = document.getElementById('sidebarOverlay');
+        const closeSidebarBtn = document.getElementById('closeSidebar');
+
+        function closeSidebar() {
+            if (sidebar) sidebar.classList.remove('active');
+            if (sidebarOverlay) sidebarOverlay.classList.remove('active');
+        }
+
+        if (mobileMenuBtn && sidebar && sidebarOverlay) {
+            mobileMenuBtn.addEventListener('click', () => {
+                sidebar.classList.add('active');
+                sidebarOverlay.classList.add('active');
+            });
+
+            sidebarOverlay.addEventListener('click', closeSidebar);
+            
+            if (closeSidebarBtn) {
+                closeSidebarBtn.addEventListener('click', closeSidebar);
+                // Ensure it's visible on mobile
+                if (window.innerWidth <= 992) {
+                    closeSidebarBtn.style.display = 'block';
+                }
+            }
+        }
+
+        // Also close sidebar when a nav link is clicked on mobile
+        document.querySelectorAll('.nav-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                if (window.innerWidth <= 992) {
+                    closeSidebar();
+                }
+            });
+        });
+
     </script>
 
     <script>
