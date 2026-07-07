@@ -82,7 +82,7 @@ img { max-width: 100%; height: auto; display: block; }
 .page-header-content h1 { font-size: 3.5rem; color: var(--color-white); margin-bottom: 10px; }
 
 /* Hero Banner */
-.hero { height: 100vh; min-height: 700px; background-size: cover; background-position: center; background-attachment: fixed; position: relative; display: flex; align-items: center; justify-content: center; }
+.hero { height: 100vh; min-height: 700px; background-size: cover; background-position: center;  position: relative; display: flex; align-items: center; justify-content: center; }
 .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(15, 90, 115, 0.4), rgba(0, 0, 0, 0.6)); }
 .hero-content { position: relative; z-index: 2; text-align: center; color: var(--color-white); width: 100%; padding-top: 80px; }
 .hero-content h1 { font-size: 4.5rem; color: var(--color-white); margin-bottom: 20px; text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); }
@@ -162,7 +162,7 @@ img { max-width: 100%; height: auto; display: block; }
 .social-links a:hover { background: var(--color-accent); }
 
 /* Newsletter Box */
-.newsletter-contact { padding: 100px 0; background: url('assets/opt_img_28.webp') center/cover fixed; position: relative; }
+.newsletter-contact { padding: 100px 0; background: url('assets/opt_img_28.webp') center/cover; position: relative; }
 .newsletter-contact::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 90, 115, 0.8); }
 .glass-panel { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: var(--radius-lg); padding: 50px; text-align: center; color: var(--color-white); max-width: 600px; margin: 0 auto; position: relative; z-index: 2; }
 .glass-panel h2 { color: var(--color-white); }
@@ -190,7 +190,7 @@ img { max-width: 100%; height: auto; display: block; }
    ========================================================================== */
 .auth-page {
     min-height: 100vh;
-    padding: 50px 20px;
+    padding: 100px 20px 50px 20px;
     display: flex;
     align-items: center;
     justify-content: center;
