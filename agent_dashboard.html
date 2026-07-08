@@ -129,6 +129,82 @@
                     </div>
                 </div>
 
+                <!-- Section 3: Upcoming Departures -->
+                <div class="dash-card" style="margin-top: 20px;">
+                    <div class="dash-card-header">
+                        <h3>Upcoming Departures (Next 7 Days)</h3>
+                        <button class="dash-btn dash-btn-outline" style="padding: 5px 10px; font-size: 0.8rem;" onclick="window.location.href='404.html'">View All</button>
+                    </div>
+                    <div class="table-responsive">
+                    <table class="dash-table">
+                        <thead>
+                            <tr>
+                                <th>Client Name</th>
+                                <th>Tour</th>
+                                <th>Departure Date</th>
+                                <th>Pax</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><div style="display:flex; align-items:center; gap:10px;"><div style="width:30px; height:30px; border-radius:50%; background:var(--accent-blue); color:white; display:flex; align-items:center; justify-content:center; font-size:0.8rem;">JS</div>John Smith</div></td>
+                                <td>Swiss Alps Expedition</td>
+                                <td>Tomorrow</td>
+                                <td>2</td>
+                                <td><span class="badge badge-success">Ready</span></td>
+                            </tr>
+                            <tr>
+                                <td><div style="display:flex; align-items:center; gap:10px;"><div style="width:30px; height:30px; border-radius:50%; background:var(--accent-orange); color:white; display:flex; align-items:center; justify-content:center; font-size:0.8rem;">MD</div>Maria Davis</div></td>
+                                <td>Maldives Getaway</td>
+                                <td>In 3 Days</td>
+                                <td>4</td>
+                                <td><span class="badge badge-warning">Pending Docs</span></td>
+                            </tr>
+                            <tr>
+                                <td><div style="display:flex; align-items:center; gap:10px;"><div style="width:30px; height:30px; border-radius:50%; background:var(--accent-green); color:white; display:flex; align-items:center; justify-content:center; font-size:0.8rem;">KL</div>Kevin Lee</div></td>
+                                <td>Tokyo Highlights</td>
+                                <td>In 5 Days</td>
+                                <td>1</td>
+                                <td><span class="badge badge-success">Ready</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+
+                <!-- Section 4: Monthly Targets -->
+                <div class="dash-grid-2" style="margin-top: 20px;">
+                    <div class="dash-card">
+                        <div class="dash-card-header">
+                            <h3>Sales Target</h3>
+                        </div>
+                        <div style="margin-top: 10px;">
+                            <div class="flex-between" style="margin-bottom: 5px;">
+                                <span style="font-size: 0.9rem; font-weight: 500;">$84,500 / $100,000</span>
+                                <span style="font-size: 0.9rem; font-weight: 500; color: var(--accent-blue);">84%</span>
+                            </div>
+                            <div style="width: 100%; height: 10px; background: #e2e8f0; border-radius: 5px; overflow: hidden;">
+                                <div style="width: 84%; height: 100%; background: var(--accent-blue); border-radius: 5px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dash-card">
+                        <div class="dash-card-header">
+                            <h3>Client Acquisition</h3>
+                        </div>
+                        <div style="margin-top: 10px;">
+                            <div class="flex-between" style="margin-bottom: 5px;">
+                                <span style="font-size: 0.9rem; font-weight: 500;">45 / 50 New Clients</span>
+                                <span style="font-size: 0.9rem; font-weight: 500; color: var(--accent-green);">90%</span>
+                            </div>
+                            <div style="width: 100%; height: 10px; background: #e2e8f0; border-radius: 5px; overflow: hidden;">
+                                <div style="width: 90%; height: 100%; background: var(--accent-green); border-radius: 5px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
             <!-- TAB 2: APPROVALS -->
@@ -189,6 +265,30 @@
                                 <td>Sarah Jenkins</td>
                                 <td>Kyoto Temples</td>
                                 <td>Apr 12 - Apr 20, 2026</td>
+                                <td>
+                                    <div style="display:flex; gap:10px;">
+                                        <button class="dash-btn dash-btn-primary" style="padding: 5px 15px; font-size: 0.8rem;" onclick="window.location.href='404.html'">Approve</button>
+                                        <button class="dash-btn dash-btn-outline" style="padding: 5px 15px; font-size: 0.8rem; border-color: var(--accent-red); color: var(--accent-red);" onclick="window.location.href='404.html'">Decline</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#A-9083</td>
+                                <td>Michael Chang</td>
+                                <td>Bali Bliss Retreat</td>
+                                <td>May 05 - May 12, 2026</td>
+                                <td>
+                                    <div style="display:flex; gap:10px;">
+                                        <button class="dash-btn dash-btn-primary" style="padding: 5px 15px; font-size: 0.8rem;" onclick="window.location.href='404.html'">Approve</button>
+                                        <button class="dash-btn dash-btn-outline" style="padding: 5px 15px; font-size: 0.8rem; border-color: var(--accent-red); color: var(--accent-red);" onclick="window.location.href='404.html'">Decline</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#A-9084</td>
+                                <td>Emma Watson</td>
+                                <td>Swiss Alps Skiing</td>
+                                <td>Jan 10 - Jan 17, 2027</td>
                                 <td>
                                     <div style="display:flex; gap:10px;">
                                         <button class="dash-btn dash-btn-primary" style="padding: 5px 15px; font-size: 0.8rem;" onclick="window.location.href='404.html'">Approve</button>
@@ -290,6 +390,18 @@
                                 <td><span class="badge badge-success">Active</span></td>
                                 <td><button class="dash-btn dash-btn-outline" style="padding: 5px 15px; font-size: 0.8rem;" onclick="window.location.href='404.html'">Edit</button></td>
                             </tr>
+                            <tr>
+                                <td>Bali Bliss Retreat</td>
+                                <td>10 / 15</td>
+                                <td><span class="badge badge-success">Active</span></td>
+                                <td><button class="dash-btn dash-btn-outline" style="padding: 5px 15px; font-size: 0.8rem;" onclick="window.location.href='404.html'">Edit</button></td>
+                            </tr>
+                            <tr>
+                                <td>Paris City Break</td>
+                                <td>20 / 20</td>
+                                <td><span class="badge badge-warning">Full</span></td>
+                                <td><button class="dash-btn dash-btn-outline" style="padding: 5px 15px; font-size: 0.8rem;" onclick="window.location.href='404.html'">Edit</button></td>
+                            </tr>
                         </tbody>
                     </table>
                     </div>
@@ -306,6 +418,27 @@
                             <span style="color: #ffb547;"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
                         </div>
                         <p style="margin:0; font-size: 0.85rem; color: var(--text-secondary);">"Incredible experience, the guides were perfectly organized. Highly recommend this agency!"</p>
+                    </div>
+                </div>
+
+                <!-- Section 5: Draft Tours -->
+                <div class="dash-card" style="margin-top: 20px;">
+                    <div class="dash-card-header">
+                        <h3>Draft Tours</h3>
+                    </div>
+                    <div class="flex-between" style="border: 1px dashed #e2e8f0; border-radius: var(--radius-md); padding: 15px; margin-bottom: 10px;">
+                        <div>
+                            <h4 style="margin:0 0 5px 0; color: var(--text-secondary);">Amazon Rainforest Adventure</h4>
+                            <span style="font-size:0.8rem; color:var(--text-secondary);">Draft saved 2 days ago</span>
+                        </div>
+                        <button class="dash-btn dash-btn-outline" style="padding: 5px 15px; font-size: 0.8rem;" onclick="window.location.href='404.html'">Continue Editing</button>
+                    </div>
+                    <div class="flex-between" style="border: 1px dashed #e2e8f0; border-radius: var(--radius-md); padding: 15px;">
+                        <div>
+                            <h4 style="margin:0 0 5px 0; color: var(--text-secondary);">Iceland Northern Lights</h4>
+                            <span style="font-size:0.8rem; color:var(--text-secondary);">Draft saved 1 week ago</span>
+                        </div>
+                        <button class="dash-btn dash-btn-outline" style="padding: 5px 15px; font-size: 0.8rem;" onclick="window.location.href='404.html'">Continue Editing</button>
                     </div>
                 </div>
 
@@ -336,7 +469,17 @@
                                     <span style="font-size: 0.75rem; color: var(--text-secondary);">**** 5678</span>
                                 </div>
                             </div>
-                            <span class="badge badge-success">Active</span>
+                            <span class="badge badge-success">Primary</span>
+                        </div>
+                        <div class="flex-between" style="padding: 10px 0;">
+                            <div style="display:flex; align-items:center; gap:10px;">
+                                <i class='bx bxl-paypal' style="font-size: 2rem; color: #003087;"></i>
+                                <div>
+                                    <span style="display:block; font-size: 0.9rem;">PayPal Account</span>
+                                    <span style="font-size: 0.75rem; color: var(--text-secondary);">payments@auratravel.agency</span>
+                                </div>
+                            </div>
+                            <button class="dash-btn dash-btn-outline" style="padding: 3px 10px; font-size: 0.7rem; border:none; color:var(--text-secondary);" onclick="window.location.href='404.html'">Manage</button>
                         </div>
                     </div>
                 </div>
@@ -375,8 +518,38 @@
                                 <td>**** **** 5678</td>
                                 <td><span class="badge badge-success">Completed</span></td>
                             </tr>
+                            <tr>
+                                <td>Sep 01, 2026</td>
+                                <td>$9,850.00</td>
+                                <td>**** **** 5678</td>
+                                <td><span class="badge badge-success">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>Aug 01, 2026</td>
+                                <td>$14,200.00</td>
+                                <td>**** **** 5678</td>
+                                <td><span class="badge badge-success">Completed</span></td>
+                            </tr>
                         </tbody>
                     </table>
+                    </div>
+                </div>
+
+                <!-- Section 5: Tax Documents -->
+                <div class="dash-card" style="margin-top: 20px;">
+                    <div class="dash-card-header">
+                        <h3>Tax Documents (2025)</h3>
+                        <button class="dash-btn dash-btn-outline" style="padding: 5px 15px; font-size: 0.8rem;" onclick="window.location.href='404.html'">View All</button>
+                    </div>
+                    <div class="flex-between" style="border: 1px solid #e2e8f0; border-radius: var(--radius-md); padding: 15px;">
+                        <div style="display:flex; align-items:center; gap:10px;">
+                            <i class='bx bxs-file-pdf' style="font-size: 1.5rem; color: var(--accent-red);"></i>
+                            <div>
+                                <span style="display:block; font-size: 0.9rem;">1099-K Form (2025)</span>
+                                <span style="font-size: 0.75rem; color: var(--text-secondary);">Issued Jan 31, 2026</span>
+                            </div>
+                        </div>
+                        <button class="dash-btn dash-btn-outline" style="padding: 5px 10px; font-size: 0.8rem;" onclick="window.location.href='404.html'">Download</button>
                     </div>
                 </div>
 
@@ -407,6 +580,18 @@
                                 <label>Business Email</label>
                                 <input type="email" id="settingsEmail" required>
                             </div>
+                            <div class="dash-form-group">
+                                <label>Phone Number</label>
+                                <input type="tel" value="+1 (555) 987-6543">
+                            </div>
+                            <div class="dash-form-group">
+                                <label>Registration No.</label>
+                                <input type="text" value="REG-2026-991">
+                            </div>
+                            <div class="dash-form-group full">
+                                <label>Company Website</label>
+                                <input type="url" value="https://auratravel.agency">
+                            </div>
                             <div class="dash-form-group full">
                                 <label>Payout Bank Account (IBAN)</label>
                                 <input type="text" value="US12 3456 7890 1234" required>
@@ -423,11 +608,33 @@
                             <div class="dash-card-header">
                                 <h3>Security</h3>
                             </div>
-                            <div class="dash-form-group" style="margin-bottom: 10px;">
+                            <div class="dash-form-group" style="margin-bottom: 15px;">
                                 <label>Current Password</label>
                                 <input type="password" value="********" readonly>
                             </div>
-                            <button class="dash-btn dash-btn-outline" style="width: 100%;" onclick="window.location.href='404.html'">Update Password</button>
+                            <button class="dash-btn dash-btn-outline" style="width: 100%; margin-bottom: 20px;" onclick="window.location.href='404.html'">Update Password</button>
+                            
+                            <div class="dash-card-header" style="margin-bottom: 10px;">
+                                <h4 style="margin:0;">Two-Factor Auth</h4>
+                            </div>
+                            <div class="flex-between" style="margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #e2e8f0;">
+                                <span style="font-size:0.9rem; color: var(--text-secondary);">Required for Payouts</span>
+                                <input type="checkbox" checked style="width:20px; height:20px; accent-color: var(--accent-blue);">
+                            </div>
+
+                            <div class="dash-card-header" style="margin-bottom: 10px;">
+                                <h4 style="margin:0;">Active Sessions</h4>
+                            </div>
+                            <div class="flex-between">
+                                <div style="display:flex; align-items:center; gap:10px;">
+                                    <i class='bx bx-laptop' style="font-size: 1.5rem; color: var(--text-secondary);"></i>
+                                    <div>
+                                        <span style="font-size:0.9rem; display:block;">MacOS • Safari</span>
+                                        <span style="font-size:0.75rem; color: var(--text-secondary);">Current Session</span>
+                                    </div>
+                                </div>
+                                <span class="badge badge-success">Active</span>
+                            </div>
                         </div>
 
                         <!-- Section 3: Notification Preferences -->
@@ -451,11 +658,42 @@
                                 <h3>Team Members</h3>
                                 <button class="dash-btn dash-btn-outline" style="padding: 5px 10px; font-size: 0.75rem;" onclick="window.location.href='404.html'">+ Add</button>
                             </div>
-                            <div class="flex-between">
+                            <div class="flex-between" style="margin-bottom:15px;">
                                 <div style="display:flex; align-items:center; gap:10px;">
                                     <div style="width:30px; height:30px; border-radius:50%; background:var(--accent-blue); color:white; display:flex; align-items:center; justify-content:center; font-size:0.8rem;">S</div>
                                     <span style="font-size:0.9rem;">Sarah J. (Admin)</span>
                                 </div>
+                                <span class="badge badge-success">Active</span>
+                            </div>
+                            <div class="flex-between">
+                                <div style="display:flex; align-items:center; gap:10px;">
+                                    <div style="width:30px; height:30px; border-radius:50%; background:var(--accent-orange); color:white; display:flex; align-items:center; justify-content:center; font-size:0.8rem;">M</div>
+                                    <span style="font-size:0.9rem;">Mike T. (Agent)</span>
+                                </div>
+                                <button class="dash-btn dash-btn-outline" style="padding: 3px 10px; font-size: 0.7rem; border:none; color:var(--text-secondary);" onclick="window.location.href='404.html'">Manage</button>
+                            </div>
+                        </div>
+
+                        <!-- Section 5: Preferences -->
+                        <div class="dash-card">
+                            <div class="dash-card-header">
+                                <h3>Business Preferences</h3>
+                            </div>
+                            <div class="dash-form-group" style="margin-bottom: 15px;">
+                                <label>Base Currency</label>
+                                <select style="width: 100%; padding: 10px; border: 1px solid #e2e8f0; border-radius: var(--radius-sm); outline: none;">
+                                    <option>USD ($)</option>
+                                    <option>EUR (€)</option>
+                                    <option>GBP (£)</option>
+                                </select>
+                            </div>
+                            <div class="dash-form-group">
+                                <label>Timezone</label>
+                                <select style="width: 100%; padding: 10px; border: 1px solid #e2e8f0; border-radius: var(--radius-sm); outline: none;">
+                                    <option>(GMT-05:00) Eastern Time</option>
+                                    <option>(GMT-08:00) Pacific Time</option>
+                                    <option>(GMT+00:00) London</option>
+                                </select>
                             </div>
                         </div>
                     </div>
