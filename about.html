@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Aura Travel</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Page Loader -->
+    <div class="loader-wrapper" id="loader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- 1. Header -->
+    <header class="header" id="header">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; height: 100%;">
+            <a href="index.html" class="logo"><img src="assets/logo.webp" alt="Aura Travel" style="height: 40px; width: auto;"></a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="destinations.html" class="nav-link">Destinations</a></li>
+                    <li><a href="tours.html" class="nav-link">Tours</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="about.html" class="nav-link active">About Us</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="mobile-only-nav"><a href="login.html" class="nav-link" style="color: var(--color-primary); background: var(--color-white); padding: 10px; border-radius: 5px; text-align: center; font-weight: 700;">Log In</a></li>
+                    <li class="mobile-only-nav"><a href="signup.html" class="nav-link" style="color: var(--color-white); background: var(--color-primary); padding: 10px; border-radius: 5px; text-align: center; font-weight: 700;">Sign Up</a></li>
+                </ul>
+            </nav>
+            <div class="header-auth">
+                <a href="login.html" class="btn btn-outline">Log In</a>
+                <a href="signup.html" class="btn btn-primary">Sign Up</a>
+            </div>
+            <div class="mobile-toggle" id="mobile-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Page Hero -->
+    <section class="page-header" style="background-image: url('assets/hero_bg.webp');">
+        <div class="container text-center" data-aos="zoom-in">
+            <h1>About Aura Travel</h1>
+            <p>Curating extraordinary journeys since 2010.</p>
+        </div>
+    </section>
+
+    <!-- 3. Our Story -->
+    <section class="section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-img" data-aos="fade-right">
+                    <img src="assets/opt_img_29.webp" alt="Our Story" style="border-radius: 10px; width: 100%; object-fit: cover;">
+                </div>
+                <div class="about-text" data-aos="fade-left">
+                    <span class="subtitle">Our Journey</span>
+                    <h2>Redefining Luxury Travel</h2>
+                    <p style="margin-top:20px; color: var(--color-text-light); line-height: 1.8;">Founded by a group of passionate explorers, Aura Travel began with a simple mission: to provide travel experiences that go beyond the ordinary. We believe that travel is not just about visiting places, but about deeply immersing yourself in new cultures, landscapes, and perspectives.</p>
+                    <p style="margin-top:15px; color: var(--color-text-light); line-height: 1.8;">Over the past decade, we have built a global network of trusted local experts, luxury accommodations, and premium transport partners to ensure that every itinerary we design is flawless, unforgettable, and entirely personalized.</p>
+                    <div style="margin-top: 30px; display: flex; gap: 40px;">
+                        <div>
+                            <h3 style="color: var(--color-accent); font-size: 2rem; margin: 0;">15+</h3>
+                            <p style="font-size: 0.9rem; font-weight: 600; text-transform: uppercase;">Years Experience</p>
+                        </div>
+                        <div>
+                            <h3 style="color: var(--color-accent); font-size: 2rem; margin: 0;">50k+</h3>
+                            <p style="font-size: 0.9rem; font-weight: 600; text-transform: uppercase;">Happy Travelers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Core Values -->
+    <section class="section bg-light">
+        <div class="container text-center">
+            <div class="section-title" data-aos="fade-up">
+                <span class="subtitle">What Drives Us</span>
+                <h2>Our Core Values</h2>
+            </div>
+            <div class="grid-3" style="margin-top: 40px;">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class='bx bx-diamond' style="font-size: 3rem; color: var(--color-accent); margin-bottom: 20px;"></i>
+                    <h3 style="margin-bottom: 15px;">Uncompromising Quality</h3>
+                    <p style="color: var(--color-text-light); font-size: 0.95rem;">From 5-star resorts to private chauffeurs, we vet every single partner to ensure the highest standards.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class='bx bx-leaf' style="font-size: 3rem; color: var(--color-accent); margin-bottom: 20px;"></i>
+                    <h3 style="margin-bottom: 15px;">Sustainable Tourism</h3>
+                    <p style="color: var(--color-text-light); font-size: 0.95rem;">We are committed to eco-friendly practices that support local communities and protect natural environments.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class='bx bx-user-pin' style="font-size: 3rem; color: var(--color-accent); margin-bottom: 20px;"></i>
+                    <h3 style="margin-bottom: 15px;">Personalized Care</h3>
+                    <p style="color: var(--color-text-light); font-size: 0.95rem;">Your journey is unique. Our dedicated concierge team is available 24/7 to cater to your every need.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Meet The Team -->
+    <section class="section">
+        <div class="container text-center">
+            <div class="section-title" data-aos="fade-up">
+                <span class="subtitle">The Experts</span>
+                <h2>Meet The Team</h2>
+            </div>
+            <div class="grid-4" style="margin-top: 40px;">
+                <div class="expert-card" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="assets/opt_img_24.webp" alt="Michael">
+                    <h3>Michael Scott</h3>
+                    <p>CEO & Founder</p>
+                </div>
+                <div class="expert-card" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="assets/opt_img_25.webp" alt="Jim">
+                    <h3>Jim Halpert</h3>
+                    <p>Head of Operations</p>
+                </div>
+                <div class="expert-card" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="assets/opt_img_26.webp" alt="Pam">
+                    <h3>Pam Beesley</h3>
+                    <p>Client Experience Manager</p>
+                </div>
+                <div class="expert-card" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="assets/opt_img_31.webp" alt="Dwight">
+                    <h3>Dwight Schrute</h3>
+                    <p>Adventure Specialist</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Join Our Team Promo -->
+    <section class="section bg-dark text-center">
+        <div class="container" data-aos="fade-up">
+            <h2 style="color: #fff; margin-bottom: 15px;">Want to join our journey?</h2>
+            <p style="color: #A0B2BA; max-width: 600px; margin: 0 auto 30px auto;">We are always looking for passionate travel experts, coordinators, and guides to join our growing global family.</p>
+            <a href="contact.html" class="btn btn-accent">View Open Positions</a>
+        </div>
+    </section>
+
+    <!-- 7. Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+                    <a href="index.html" class="logo">
+                        <img src="assets/logo.webp" alt="Aura Travel" style="height: 40px; width: auto; filter: brightness(0) invert(1);">
+                    </a>
+                    <p style="margin-top: 20px; color: #A0B2BA; font-size: 0.9rem; line-height: 1.6;">
+                        Your premier partner in luxury travel. We curate bespoke journeys that inspire and transform.
+                    </p>
+                    <div class="social-links" style="margin-top: 20px; display: flex; gap: 15px;">
+                        <a href="#" style="color: #fff; font-size: 1.2rem;"><i class='bx bxl-facebook'></i></a>
+                        <a href="#" style="color: #fff; font-size: 1.2rem;"><i class='bx bxl-instagram'></i></a>
+                        <a href="#" style="color: #fff; font-size: 1.2rem;"><i class='bx bxl-twitter'></i></a>
+                        <a href="#" style="color: #fff; font-size: 1.2rem;"><i class='bx bxl-youtube'></i></a>
+                    </div>
+                </div>
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+                    <h3 style="color: #fff; margin-bottom: 20px; font-size: 1.2rem;">Quick Links</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 12px;"><a href="index.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Home</a></li>
+                        <li style="margin-bottom: 12px;"><a href="destinations.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Destinations</a></li>
+                        <li style="margin-bottom: 12px;"><a href="tours.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Tours</a></li>
+                        <li style="margin-bottom: 12px;"><a href="about.html" style="color: #ffffff; text-decoration: none;">About Us</a></li>
+                        <li style="margin-bottom: 12px;"><a href="services.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Services</a></li>
+                        <li style="margin-bottom: 12px;"><a href="contact.html" style="color: #A0B2BA; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#A0B2BA'">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+                    <h3 style="color: #fff; margin-bottom: 20px; font-size: 1.2rem;">Contact Info</h3>
+                    <ul style="list-style: none; padding: 0; color: #A0B2BA;">
+                        <li style="margin-bottom: 15px; display: flex; align-items: flex-start; gap: 10px;">
+                            <i class='bx bx-map' style="font-size: 1.2rem; color: var(--color-accent);"></i>
+                            <span>123 Luxury Ave, Suite 500<br>New York, NY 10001</span>
+                        </li>
+                        <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                            <i class='bx bx-phone' style="font-size: 1.2rem; color: var(--color-accent);"></i>
+                            <span>+1 (800) 123-4567</span>
+                        </li>
+                        <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                            <i class='bx bx-envelope' style="font-size: 1.2rem; color: var(--color-accent);"></i>
+                            <span>hello@auratravel.agency</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 40px; padding-top: 20px; text-align: center; color: #A0B2BA; font-size: 0.9rem;">
+                <p>&copy; 2026 Aura Travel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

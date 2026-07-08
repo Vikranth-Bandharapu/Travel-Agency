@@ -19,13 +19,14 @@
     <!-- 1. Header -->
     <header id="header" class="header">
         <div class="container nav-container">
-            <a href="index.html" class="logo"><img src="assets/logo.webp" alt="Aura Travel" style="height: 40px; width: auto;"></a>
+            <a href="index.html" class="logo"><img src="assets/logo.webp" alt="Aura Travel" style="height: 26px; width: auto;"></a>
             <nav class="navbar">
                 <ul class="nav-list">
                     <li><a href="index.html" class="nav-link active">Home</a></li>
                     <li><a href="destinations.html" class="nav-link">Destinations</a></li>
                     <li><a href="tours.html" class="nav-link">Tours</a></li>
                     <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
                     <li><a href="blog.html" class="nav-link">Blog</a></li>
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
                     <li class="mobile-only-nav"><a href="login.html" class="nav-link" style="color: var(--color-primary); background: var(--color-white); padding: 10px; border-radius: 5px; text-align: center; font-weight: 700;">Log In</a></li>
@@ -41,7 +42,7 @@
     </header>
 
     <!-- 2. Hero Banner -->
-    <section class="hero" style="background-image: url('assets/hero_bg.webp');">
+    <section class="hero" style="background-image: url('assets/hero_bg_small.webp');">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
             <h1 data-aos="fade-up">Discover Your Next <span>Adventure</span></h1>
@@ -212,40 +213,92 @@
         </div>
     </section>
 
-    <!-- New Section 11: Travel Map Placeholder -->
+    <!-- Section 11: Global Network & Trusted Partners -->
     <section class="section bg-light text-center">
         <div class="container" data-aos="fade-up">
             <span class="subtitle">Global Network</span>
-            <h2>Interactive Travel Map</h2>
-            <div class="calendar-placeholder" style="margin-top: 30px;">
-                <i class='bx bx-world' style="font-size: 3rem;"></i><br>
-                Interactive 3D Globe Placeholder
+            <h2>Trusted by the Best</h2>
+            <p style="max-width: 600px; margin: 20px auto; color: var(--color-text-light);">We partner with world-class airlines, luxury hotel chains, and local experts to ensure your journey is flawless from start to finish.</p>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-top: 40px; opacity: 0.6; filter: grayscale(100%);">
+                <h3 style="font-family: 'Playfair Display', serif; margin:0; font-size:1.8rem;">EMIRATES</h3>
+                <h3 style="font-family: 'Playfair Display', serif; margin:0; font-size:1.8rem;">FOUR SEASONS</h3>
+                <h3 style="font-family: 'Playfair Display', serif; margin:0; font-size:1.8rem;">RITZ-CARLTON</h3>
+                <h3 style="font-family: 'Playfair Display', serif; margin:0; font-size:1.8rem;">QANTAS</h3>
+                <h3 style="font-family: 'Playfair Display', serif; margin:0; font-size:1.8rem;">MARRIOTT</h3>
             </div>
         </div>
     </section>
 
-    <!-- New Section 12: Top FAQ -->
+    <!-- Section 12: Latest from the Blog -->
     <section class="section">
         <div class="container">
             <div class="section-title text-center" data-aos="fade-up">
-                <h2>Top Questions</h2>
+                <span class="subtitle">Travel Inspiration</span>
+                <h2>Latest from Our Blog</h2>
+            </div>
+            <div class="grid-3" style="margin-top: 40px;">
+                <div class="tour-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="tour-img"><img src="assets/opt_img_19.webp" alt="Blog 1"></div>
+                    <div class="tour-content">
+                        <span style="color: var(--color-accent); font-size: 0.8rem; font-weight: bold; text-transform: uppercase;">Travel Tips</span>
+                        <h3 style="margin: 10px 0;">How to Pack Light for a 2-Week European Trip</h3>
+                        <p style="color: var(--color-text-light); font-size: 0.9rem; margin-bottom: 15px;">Master the art of the capsule wardrobe and travel like a pro without checking bags.</p>
+                        <a href="404.html" style="color: var(--color-primary); font-weight: bold; text-decoration: none;">Read More &rarr;</a>
+                    </div>
+                </div>
+                <div class="tour-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="tour-img"><img src="assets/opt_img_29.webp" alt="Blog 2"></div>
+                    <div class="tour-content">
+                        <span style="color: var(--color-accent); font-size: 0.8rem; font-weight: bold; text-transform: uppercase;">Destinations</span>
+                        <h3 style="margin: 10px 0;">Top 5 Hidden Gems in Kyoto, Japan</h3>
+                        <p style="color: var(--color-text-light); font-size: 0.9rem; margin-bottom: 15px;">Escape the crowds and discover the serene, untouched beauty of traditional Kyoto.</p>
+                        <a href="404.html" style="color: var(--color-primary); font-weight: bold; text-decoration: none;">Read More &rarr;</a>
+                    </div>
+                </div>
+                <div class="tour-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="tour-img"><img src="assets/opt_img_3.webp" alt="Blog 3"></div>
+                    <div class="tour-content">
+                        <span style="color: var(--color-accent); font-size: 0.8rem; font-weight: bold; text-transform: uppercase;">Food & Culture</span>
+                        <h3 style="margin: 10px 0;">A Culinary Tour Through the Streets of Rome</h3>
+                        <p style="color: var(--color-text-light); font-size: 0.9rem; margin-bottom: 15px;">From authentic pasta to hidden gelaterias, taste your way through Italy's capital.</p>
+                        <a href="404.html" style="color: var(--color-primary); font-weight: bold; text-decoration: none;">Read More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 40px;" data-aos="fade-up">
+                <a href="404.html" class="btn btn-outline">View All Articles</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 13: Top FAQ -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title text-center" data-aos="fade-up">
+                <span class="subtitle">Got Questions?</span>
+                <h2>Frequently Asked Questions</h2>
             </div>
             <div style="max-width: 800px; margin: 0 auto;" data-aos="fade-up">
-                <details class="faq-item">
-                    <summary>Do you book flights as well?</summary>
-                    <p>Yes! We handle all logistics including first-class and private aviation.</p>
+                <details class="faq-item" style="background: #fff; padding: 20px; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); cursor: pointer;">
+                    <summary style="font-weight: bold; font-size: 1.1rem; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">Do you book flights as well? <i class='bx bx-chevron-down'></i></summary>
+                    <p style="margin-top: 15px; color: var(--color-text-light); line-height: 1.6;">Yes! We handle all logistics including commercial first-class, business class, and private aviation charters to ensure your entire journey is seamless.</p>
                 </details>
-                <details class="faq-item">
-                    <summary>Are your tours customizable?</summary>
-                    <p>Absolutely. Our private tours are 100% bespoke to your preferences.</p>
+                <details class="faq-item" style="background: #fff; padding: 20px; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); cursor: pointer;">
+                    <summary style="font-weight: bold; font-size: 1.1rem; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">Are your tours customizable? <i class='bx bx-chevron-down'></i></summary>
+                    <p style="margin-top: 15px; color: var(--color-text-light); line-height: 1.6;">Absolutely. While we offer curated group packages, our specialty lies in 100% bespoke private tours designed specifically around your preferences, pace, and interests.</p>
                 </details>
-                <details class="faq-item">
-                    <summary>What is your cancellation policy?</summary>
-                    <p>It depends on the package, but we highly recommend our comprehensive travel insurance.</p>
+                <details class="faq-item" style="background: #fff; padding: 20px; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); cursor: pointer;">
+                    <summary style="font-weight: bold; font-size: 1.1rem; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">What is your cancellation policy? <i class='bx bx-chevron-down'></i></summary>
+                    <p style="margin-top: 15px; color: var(--color-text-light); line-height: 1.6;">Cancellation policies vary by destination and package type. However, we highly recommend purchasing our comprehensive "Cancel for Any Reason" travel insurance to protect your investment.</p>
+                </details>
+                <details class="faq-item" style="background: #fff; padding: 20px; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); cursor: pointer;">
+                    <summary style="font-weight: bold; font-size: 1.1rem; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">Do you offer payment plans? <i class='bx bx-chevron-down'></i></summary>
+                    <p style="margin-top: 15px; color: var(--color-text-light); line-height: 1.6;">Yes, for bookings made more than 90 days in advance, we require a 20% deposit, with the remaining balance easily paid in flexible monthly installments via your secure customer dashboard.</p>
                 </details>
             </div>
         </div>
     </section>
+
 
     <footer class="footer">
         <div class="newsletter-contact">
@@ -263,7 +316,7 @@
             <div class="footer-grid">
                 <div class="footer-col" data-aos="fade-up">
                     <a href="index.html" class="logo">
-                        <img src="assets/logo.webp" alt="Aura Travel" style="height: 40px; width: auto; margin-bottom: 20px;">
+                        <img src="assets/logo.webp" alt="Aura Travel" style="height: 26px; width: auto; margin-bottom: 20px;">
                     </a>
                     <p style="color: #A0B2BA; line-height: 1.6; max-width: 250px;">Enterprise luxury travel engineered for exceptional experiences. </p>
                 </div>
@@ -292,14 +345,14 @@
                 <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
                     <h3 style="color: #ffffff; font-size: 1.1rem; margin-bottom: 20px;">Contact Us</h3>
                     <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 12px; color: #A0B2BA;"><i class='bx bx-envelope'></i> support@stackly.com</li>
+                        <li style="margin-bottom: 12px; color: #A0B2BA;"><i class='bx bx-envelope'></i> support@Aura Travel.com</li>
                         <li style="margin-bottom: 12px; color: #A0B2BA;"><i class='bx bx-phone'></i> 9182736450</li>
                     </ul>
                 </div>
             </div>
         </div>
         <div style="border-top: 1px solid rgba(255,255,255,0.1); padding: 20px 0; text-align: center; margin-top: 40px; background-color: #000000;">
-            <p style="color: #666; font-size: 0.85rem; letter-spacing: 1px; margin: 0;">&copy; 2026 STACKLY. ALL RIGHTS RESERVED.</p>
+            <p style="color: #666; font-size: 0.85rem; letter-spacing: 1px; margin: 0;">&copy; 2026 Aura Travel. ALL RIGHTS RESERVED.</p>
         </div>
     </div>
 </footer>
