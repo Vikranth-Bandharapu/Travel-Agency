@@ -100,9 +100,42 @@ body {
 .dash-nav-item i {
     font-size: 1.2rem;
 }
-.dash-nav-item:hover, .dash-nav-item.active {
-    background-color: var(--accent-blue);
+.dash-nav-item:hover {
+    background: rgba(67, 24, 255, 0.05);
+    color: var(--accent-blue);
+    font-weight: 600;
+}
+.dash-nav-item.active {
+    background: var(--accent-blue);
     color: white;
+}
+
+.dash-sidebar-footer {
+    margin-top: auto;
+    padding: 20px;
+    border-top: 1px solid #e2e8f0;
+}
+.logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    color: var(--accent-red);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: var(--radius-md);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    width: 100%;
+}
+.logout-btn:hover {
+    background: rgba(238, 93, 80, 0.1);
+}
+.logout-btn i {
+    font-size: 1.2rem;
 }
 
 /* Main Area */
