@@ -1850,15 +1850,40 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
+
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     const userEmail = localStorage.getItem('userEmail');
     if (userEmail) {
+        // Set email display
         const topbarEmail = document.getElementById('topbarEmail');
         if (topbarEmail) topbarEmail.textContent = userEmail;
         
         const settingsEmail = document.getElementById('settingsEmail');
         if (settingsEmail) settingsEmail.value = userEmail;
+
+        // Generate Name from Email (e.g. "john.smith@..." -> "John Smith")
+        let namePart = userEmail.split('@')[0];
+        namePart = namePart.replace(/[._-]/g, ' '); // Replace dots/underscores with spaces
+        let userName = namePart.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+
+        // Update Welcome Text
+        const pageSubtitle = document.getElementById('pageSubtitle');
+        if (pageSubtitle) {
+            pageSubtitle.textContent = 'Welcome back, ' + userName + '!';
+        }
+
+        // Update Topbar Name
+        const topbarUserDiv = document.querySelector('.dash-topbar-user h4');
+        if (topbarUserDiv) {
+            topbarUserDiv.textContent = userName;
+        }
+
+        // Update Avatar Image
+        const avatarImg = document.querySelector('.dash-topbar-right img');
+        if (avatarImg && avatarImg.src.includes('ui-avatars.com')) {
+            avatarImg.src = 'https://ui-avatars.com/api/?name=' + encodeURIComponent(userName) + '&background=4318ff&color=fff';
+        }
     }
 });
 </script>
